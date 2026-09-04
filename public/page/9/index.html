@@ -332,17 +332,18 @@ figure,figure[style],.wp-caption,.wp-caption[style]{max-width:100%!important}
   .responsive-nav{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;position:static!important;inset:auto!important;width:0!important;height:0!important;overflow:hidden!important;background:transparent!important;z-index:auto!important}
   body.showing-main-menu-modal{overflow:auto!important}
   .main-menu-modal,.primary-menu-list{visibility:hidden!important;opacity:0!important;pointer-events:none!important;position:static!important;transform:none!important;background:transparent!important;box-shadow:none!important;width:auto!important;height:auto!important;padding:0!important}
-  header.site-header>.container{padding-left:15px!important;padding-right:15px!important;padding-bottom:0!important}
+  header.site-header>.container{padding-left:15px!important;padding-right:15px!important;padding-bottom:0!important;position:relative!important}
   .header-main{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;position:relative!important;padding:16px 0!important}
   .site-branding{min-width:0!important;text-align:left!important;align-items:flex-start!important;display:flex!important;flex:auto!important}
   .site-branding .site-title,.site-branding .site-description{clip:rect(1px,1px,1px,1px)!important;position:absolute!important}
   .custom-logo-link{margin:0!important}.custom-logo-link img{max-width:72px!important;width:72px!important;height:auto!important}
-  .nav-wrap{position:static!important;display:flex!important;justify-content:flex-end!important;align-items:center!important;background:transparent!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important;z-index:20!important;flex:0 0 auto!important}
-  .nav-wrap #site-navigation{display:block!important}.nav-wrap #site-navigation .nav-menu,.nav-wrap #site-navigation .menu-menu-1-container,.nav-wrap #site-navigation .toggle-btn{display:none!important}
-  .static-mobile-menu{display:block!important;position:relative!important;margin-left:auto!important;z-index:1000!important}
+  .nav-wrap{position:absolute!important;left:auto!important;right:15px!important;top:50%!important;transform:translateY(-50%)!important;display:block!important;width:50px!important;min-width:0!important;height:50px!important;background:transparent!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important;z-index:2000!important;flex:0 0 50px!important}
+  .nav-wrap #site-navigation,.nav-wrap .main-navigation{display:none!important;width:0!important;height:0!important;overflow:hidden!important;visibility:hidden!important;pointer-events:none!important;background:transparent!important}
+  .nav-wrap button.toggle-btn,.nav-wrap .toggle-btn,.main-navigation button.toggle-btn{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+  .static-mobile-menu{display:block!important;position:relative!important;width:50px!important;height:50px!important;margin-left:0!important;z-index:2100!important}
   .static-mobile-menu summary{list-style:none;width:48px;height:48px;border-radius:999px;border:1px solid rgba(0,0,0,.12);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 6px 18px rgba(0,0,0,.12);cursor:pointer;padding:0}
   .static-mobile-menu summary::-webkit-details-marker{display:none}.static-mobile-menu summary span{width:22px;height:2px;background:#111827;border-radius:99px;display:block}
-  .static-mobile-links{position:absolute;right:0;top:calc(100% + 10px);width:min(82vw,310px);display:grid;padding:10px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.18);z-index:1001}
+  .static-mobile-links{position:fixed;right:16px;top:96px;width:min(340px,calc(100vw - 32px));display:grid;padding:10px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.18);z-index:2200}
   .static-mobile-links a{display:block;padding:14px 14px;border-radius:12px;color:#111827!important;text-decoration:none!important;font-weight:700;text-transform:none!important;border:0!important;background:transparent!important}.static-mobile-links a:hover{background:#f3f4f6!important}
   header.page-header{padding-top:54px!important;padding-bottom:42px!important;margin-bottom:40px!important}
 }
@@ -388,7 +389,7 @@ figure,figure[style],.wp-caption,.wp-caption[style]{max-width:100%!important}
     <a href="/terms-and-conditions/">Terms And Conditions</a>
   </nav>
 </details>
-
+<nav id="site-navigation" class="main-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <button class="toggle-btn" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
             <span class="toggle-bar"></span>
             <span class="toggle-bar"></span>
