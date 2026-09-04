@@ -106,44 +106,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 
 
-Conversation opened. 5 messages. All messages read.
-
-Skip to content
-Using Gmail with screen readers
-1 of 563
-re Using composequickly.com
-Inbox
-Neale Goldingay
-	
-	Apr 25, 2024, 3:49 AM (1 day ago)
-Hi Olivia Thanks for testing out Compose quickly. You may not know there is a beta feature that you can use to significantly increase the accuracy of the articl
-2
-Olivia Johns
-	
-	11:33 AM (1 hour ago)
-Hey Thanks for explaining Sounds good I`ve also experience issues with the view of Cons & Pros section, if I want to use article with website posting Looks li
-Neale Goldingay
-	
-Attachments12:06 PM (57 minutes ago)
-	
-to me
-I see what you mean, I designed it either to upload directly, which includes the css, or download the html file, and paste that into a html block, both include the css. 
-
-Your not the first to experience this I guess you are just copying the content across
-
-Add the css in the attached file to
-
-Admin > Appearance > Customize > Aditional CSS
-
-it wont change anything else on the site 
-
-Neale 
- One attachment  •  Scanned by Gmail
-	
-Thanks, I'll check it out!
-Awesome, thanks!
-Thanks for the tip!
-
 .grid_container,
 .grid_row {
 	display: grid;
@@ -346,22 +308,33 @@ else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
 </style>
 
 
-<style id="static-mobile-menu-css">
-@media (max-width: 1024px){
-  .responsive-nav{display:block}.site-header .main-navigation .nav-menu{display:none}
-  .main-menu-modal{visibility:hidden;opacity:0;pointer-events:none;transition:opacity .18s ease,visibility .18s ease}
-  body.showing-main-menu-modal .main-menu-modal{visibility:visible;opacity:1;pointer-events:auto}
-  body.showing-main-menu-modal .responsive-nav{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.5)}
-  body.showing-main-menu-modal .primary-menu-list{position:absolute;top:0;right:0;width:min(86vw,360px);height:100%;overflow:auto;background:#fff;box-shadow:-20px 0 60px rgba(0,0,0,.22);padding:72px 28px 28px;display:block}
-  body.showing-main-menu-modal .primary-menu-list .mobile-menu ul{display:grid;gap:0;margin:0;padding:0;list-style:none}
-  body.showing-main-menu-modal .primary-menu-list .mobile-menu a{display:block;padding:15px 0;border-bottom:1px solid #eef2f7;color:#1f2937;font-weight:700;text-decoration:none}
-  .close-main-nav-toggle{position:absolute;top:22px;right:22px;width:42px;height:42px;border:0;border-radius:999px;background:#eef2f7;cursor:pointer;z-index:2}
-  .close-main-nav-toggle:before{content:'×';font-size:30px;line-height:40px;color:#111827}
-  .toggle-btn{display:inline-flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;width:46px;height:46px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer}
-  .toggle-btn .toggle-bar{display:block;width:20px;height:2px;background:#111827;border-radius:99px}
+<style id="static-hard-qa-css">
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,iframe{max-width:100%;height:auto}
+figure,figure[style],.wp-caption,.wp-caption[style]{max-width:100%!important}
+.pure_content img,.entry-content img,.post img{max-width:100%;height:auto}
+.site-header,.site-header .container,.header-main,.nav-wrap{overflow:visible!important}
+.static-mobile-menu{display:none}
+@media (max-width:1024px){
+  .responsive-nav{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;position:static!important;inset:auto!important;width:0!important;height:0!important;overflow:hidden!important;background:transparent!important;z-index:auto!important}
+  body.showing-main-menu-modal{overflow:auto!important}
+  .main-menu-modal,.primary-menu-list{visibility:hidden!important;opacity:0!important;pointer-events:none!important;position:static!important;transform:none!important;background:transparent!important;box-shadow:none!important;width:auto!important;height:auto!important;padding:0!important}
+  header.site-header>.container{padding-left:15px!important;padding-right:15px!important;padding-bottom:0!important}
+  .header-main{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;position:relative!important;padding:16px 0!important}
+  .site-branding{min-width:0!important;text-align:left!important;align-items:flex-start!important;display:flex!important;flex:auto!important}
+  .site-branding .site-title,.site-branding .site-description{clip:rect(1px,1px,1px,1px)!important;position:absolute!important}
+  .custom-logo-link{margin:0!important}.custom-logo-link img{max-width:72px!important;width:72px!important;height:auto!important}
+  .nav-wrap{position:static!important;display:flex!important;justify-content:flex-end!important;align-items:center!important;background:transparent!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important;z-index:20!important;flex:0 0 auto!important}
+  .nav-wrap #site-navigation{display:block!important}.nav-wrap #site-navigation .nav-menu,.nav-wrap #site-navigation .menu-menu-1-container,.nav-wrap #site-navigation .toggle-btn{display:none!important}
+  .static-mobile-menu{display:block!important;position:relative!important;margin-left:auto!important;z-index:1000!important}
+  .static-mobile-menu summary{list-style:none;width:48px;height:48px;border-radius:999px;border:1px solid rgba(0,0,0,.12);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 6px 18px rgba(0,0,0,.12);cursor:pointer;padding:0}
+  .static-mobile-menu summary::-webkit-details-marker{display:none}.static-mobile-menu summary span{width:22px;height:2px;background:#111827;border-radius:99px;display:block}
+  .static-mobile-links{position:absolute;right:0;top:calc(100% + 10px);width:min(82vw,310px);display:grid;padding:10px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.18);z-index:1001}
+  .static-mobile-links a{display:block;padding:14px 14px;border-radius:12px;color:#111827!important;text-decoration:none!important;font-weight:700;text-transform:none!important;border:0!important;background:transparent!important}.static-mobile-links a:hover{background:#f3f4f6!important}
+  header.page-header{padding-top:54px!important;padding-bottom:42px!important;margin-bottom:40px!important}
 }
+@media (max-width:767px){.container{width:auto!important;max-width:100%!important;margin-left:15px!important;margin-right:15px!important}.site-content>.container{margin-left:15px!important;margin-right:15px!important}.content-area,#primary,#secondary{width:100%!important;float:none!important;padding-left:0!important;padding-right:0!important}.post figure{width:100%!important}}
 </style>
-
 </head>
 
 <body class="archive category" itemscope itemtype="http://schema.org/WebPage">
@@ -391,7 +364,18 @@ else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
                         </div>    
                                 </div><!-- .header-main -->
             <div class="nav-wrap">
-                	<nav id="site-navigation" class="main-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                	<details class="static-mobile-menu">
+  <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+  <nav class="static-mobile-links" aria-label="Mobile menu">
+    <a href="/">Home</a>
+    <a href="/category/travel/">Travel</a>
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <a href="/contact-us/">Contact Us</a>
+    <a href="/dmca/">DMCA</a>
+    <a href="/terms-and-conditions/">Terms And Conditions</a>
+  </nav>
+</details>
+
         <button class="toggle-btn" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
             <span class="toggle-bar"></span>
             <span class="toggle-bar"></span>
@@ -570,6 +554,8 @@ var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$
 }());
 /* ]]> */
 </script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 <script type="text/javascript" src="/wp-content/themes/blossom-spa/js/all.min.js" id="all-js" defer></script>
 <script type="text/javascript" src="/wp-content/themes/blossom-spa/js/v4-shims.min.js" id="v4-shims-js" defer></script>
 <script type="text/javascript" src="/wp-content/themes/blossom-spa/js/owl.carousel.min.js" id="owl-carousel-js" defer></script>
@@ -588,28 +574,6 @@ images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.adde
 if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script>
 <script>function lazyLoadThumb(e){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
 <script type="text/javascript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" media="all" data-minify="1" /></noscript>
-<script id="static-mobile-menu-js">
-document.addEventListener('DOMContentLoaded', function () {
-  var body = document.body;
-  function closeMenu() {
-    body.classList.remove('showing-main-menu-modal');
-    document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) { btn.setAttribute('aria-expanded', 'false'); });
-  }
-  function openMenu() {
-    body.classList.add('showing-main-menu-modal');
-    document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) { btn.setAttribute('aria-expanded', 'true'); });
-  }
-  document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) {
-    btn.addEventListener('click', function (event) {
-      event.preventDefault();
-      body.classList.contains('showing-main-menu-modal') ? closeMenu() : openMenu();
-    });
-  });
-  document.querySelectorAll('.main-menu-modal a').forEach(function (link) { link.addEventListener('click', closeMenu); });
-  document.addEventListener('keyup', function (event) { if (event.key === 'Escape') closeMenu(); });
-});
-</script>
-
 </body>
 </html>
 
