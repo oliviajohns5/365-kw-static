@@ -344,6 +344,23 @@ else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
 .entry-meta{gap:10px}.entry-meta svg{display:none}.site-description{font-style:normal}.widget-title{letter-spacing:.01em}.back-to-top{border-radius:999px}
 </style>
 
+
+<style id="static-mobile-menu-css">
+@media (max-width: 1024px){
+  .responsive-nav{display:block}.site-header .main-navigation .nav-menu{display:none}
+  .main-menu-modal{visibility:hidden;opacity:0;pointer-events:none;transition:opacity .18s ease,visibility .18s ease}
+  body.showing-main-menu-modal .main-menu-modal{visibility:visible;opacity:1;pointer-events:auto}
+  body.showing-main-menu-modal .responsive-nav{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.5)}
+  body.showing-main-menu-modal .primary-menu-list{position:absolute;top:0;right:0;width:min(86vw,360px);height:100%;overflow:auto;background:#fff;box-shadow:-20px 0 60px rgba(0,0,0,.22);padding:72px 28px 28px;display:block}
+  body.showing-main-menu-modal .primary-menu-list .mobile-menu ul{display:grid;gap:0;margin:0;padding:0;list-style:none}
+  body.showing-main-menu-modal .primary-menu-list .mobile-menu a{display:block;padding:15px 0;border-bottom:1px solid #eef2f7;color:#1f2937;font-weight:700;text-decoration:none}
+  .close-main-nav-toggle{position:absolute;top:22px;right:22px;width:42px;height:42px;border:0;border-radius:999px;background:#eef2f7;cursor:pointer;z-index:2}
+  .close-main-nav-toggle:before{content:'×';font-size:30px;line-height:40px;color:#111827}
+  .toggle-btn{display:inline-flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;width:46px;height:46px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer}
+  .toggle-btn .toggle-bar{display:block;width:20px;height:2px;background:#111827;border-radius:99px}
+}
+</style>
+
 </head>
 
 <body class="archive date" itemscope itemtype="http://schema.org/WebPage">
@@ -473,7 +490,30 @@ if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
 images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
 if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script>
 <script>function lazyLoadThumb(e){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
-<script type="text/javascript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" media="all" data-minify="1" /></noscript></body>
+<script type="text/javascript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" media="all" data-minify="1" /></noscript>
+<script id="static-mobile-menu-js">
+document.addEventListener('DOMContentLoaded', function () {
+  var body = document.body;
+  function closeMenu() {
+    body.classList.remove('showing-main-menu-modal');
+    document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) { btn.setAttribute('aria-expanded', 'false'); });
+  }
+  function openMenu() {
+    body.classList.add('showing-main-menu-modal');
+    document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) { btn.setAttribute('aria-expanded', 'true'); });
+  }
+  document.querySelectorAll('[data-toggle-target=".main-menu-modal"]').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      body.classList.contains('showing-main-menu-modal') ? closeMenu() : openMenu();
+    });
+  });
+  document.querySelectorAll('.main-menu-modal a').forEach(function (link) { link.addEventListener('click', closeMenu); });
+  document.addEventListener('keyup', function (event) { if (event.key === 'Escape') closeMenu(); });
+});
+</script>
+
+</body>
 </html>
 
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1788524875 -->
