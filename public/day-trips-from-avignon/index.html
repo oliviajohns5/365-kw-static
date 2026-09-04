@@ -1,0 +1,775 @@
+    <!DOCTYPE html>
+    <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+    <head itemscope itemtype="http://schema.org/WebSite"><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>Day Trips From Avignon - 365-kw.com</title><style id="rocket-critical-css">:root{--primary-color:#9cbe9c;--primary-color-rgb:156, 190, 156;--primary-font:'Nunito Sans', sans-serif;--secondary-font:'Marcellus', sans-serif}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:0.67em 0}a{background-color:transparent}b,strong{font-weight:bolder}img{border-style:none}button,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,button,input{color:#585656;font-family:var(--primary-font);font-size:18px;line-height:1.8;font-weight:400}h1{clear:both;font-weight:700;margin:1em 0 0.6666em 0;line-height:1.3}h1{font-size:2.7223em}p{margin-bottom:1.5em}i{font-style:italic}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{background:#fff}ul{margin:0 0 1.5em 3em}ul{list-style:disc}img{height:auto;max-width:100%;vertical-align:top}button{display:inline-block;background:var(--primary-color);border:1px solid var(--primary-color);color:#fff;font-weight:700;font-size:0.6666em;border-radius:40px;padding:12px 25px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 0 10px rgba(0,0,0,0.2)}a{color:var(--primary-color);text-decoration:none}a:visited{color:inherit}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important}.container:before,.container:after,.site-content:before,.site-content:after{content:"";display:table;table-layout:fixed}.container:after,.site-content:after{clear:both}.updated:not(.published){display:none}.custom-logo-link{display:inline-block}.skip-link,.skip-link:visited{position:absolute;top:-999px;left:20px;background:#f7f7f7;border:1px solid rgba(0,0,0,0.1);font-size:0.8888em;font-weight:600;padding:10px 20px;color:#000;text-decoration:none;border-radius:5px;box-shadow:0 2px 20px rgba(0,0,0,0.1);z-index:999;text-decoration:none}.container{max-width:1170px;margin:0 auto}.responsive-nav{display:none}header.page-header{background-repeat:no-repeat;background-size:cover;position:relative;padding-top:90px;padding-bottom:60px;margin-bottom:80px;z-index:1;text-align:center}header.page-header::after{content:"";background:rgba(0,0,0,0.5);position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.page-header .page-title{color:#fff;font-size:2.6665em;font-family:var(--secondary-font);font-weight:400;margin-top:0;margin-bottom:20px}.comment-respond .comment-reply-title a{display:inline-block;font-size:0.7778em;margin-left:10px;color:#212127;vertical-align:middle;text-transform:uppercase;font-weight:700;letter-spacing:1px}.comment-respond .comment-form p{margin-top:0;margin-bottom:20px}.comment-form p.comment-notes{display:none}.comment-respond .comment-form p:not(.comment-form-cookies-consent) label{display:none}.back-to-top{padding:0;font-size:1em;position:fixed;bottom:20px;right:0;width:50px;height:50px;line-height:44px;background:#fff;text-align:center;border-radius:100%;opacity:0;visibility:hidden;z-index:999;border:3px solid rgba(var(--primary-color-rgb),0.5);box-shadow:0 2px 10px rgba(0,0,0,0.1);color:#000000}.header-main{display:flex;flex:1;flex-flow:row wrap;align-items:center;justify-content:flex-end;padding:33px 0}.header-main .site-branding{display:flex;flex:auto;flex-direction:column;align-items:flex-start}.site-branding .site-title{font-family:var(--secondary-font);font-weight:400;font-size:1.6667em;margin:0}.site-branding .site-title a{text-decoration:none}.site-branding .site-description{margin:0;font-size:0.8888em}header.site-header>.container{position:relative;padding-bottom:34px}.nav-wrap{background:var(--primary-color);border-radius:5px;padding:10px;display:flex;flex:1;flex-flow:row wrap;justify-content:flex-end;position:absolute;top:calc(100% - 34px);left:0;right:0;z-index:999}.nav-wrap .main-navigation{display:flex;flex:auto;align-items:center}.main-navigation button.toggle-btn{display:none}.nav-wrap ul{margin:0;padding:0;list-style:none}.main-navigation ul li{display:inline-block;vertical-align:middle;font-size:0.778em;text-transform:uppercase;font-weight:600;position:relative;margin-right:20px;margin-left:20px}.main-navigation ul li a{color:#fff;display:inline-block;border-bottom:3px solid transparent;text-decoration:none}.main-navigation ul li a:after{content:"";background:rgba(255,255,255,0.5);width:0%;height:3px;position:absolute;top:100%;left:0;opacity:0;visibility:hidden}.close{display:inline-block;width:15px;height:15px;position:relative;background:none;border:none;border-radius:0;box-shadow:none;padding:0;overflow:hidden}.close:before,.close:after{content:"";background:#fff;width:100%;height:2px;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}.close:after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}span.category a{display:inline-block;padding:3px 10px;background:#262525;border-radius:3px;color:#fff;margin-right:2px;margin-bottom:5px;text-decoration:none}.single header.page-header{min-height:600px;display:flex;flex:1;justify-content:center;align-items:flex-end}.single header.page-header .container{max-width:770px}.single header.page-header .category{font-size:0.6666em;text-transform:uppercase;font-weight:700;letter-spacing:1px}.single .page-header .page-title{margin-bottom:0}@media screen and (max-width:1370px){.back-to-top{bottom:80px}}@media screen and (max-width:1199px){.container{max-width:1000px;padding-left:15px;padding-right:15px}.main-navigation ul li{margin-left:15px;margin-right:15px}.site-branding .site-title{font-size:1.2223em}}@media screen and (min-width:1025px){.main-navigation .close{display:none}}@media screen and (max-width:1024px){.container{max-width:768px}.single header.page-header{min-height:350px}.header-main .site-branding{justify-content:center;text-align:center}.site-branding .site-title{font-size:1.6667em}.site-header .nav-wrap ul{display:none}.nav-wrap{padding:5px 10px;left:15px;right:15px}.main-navigation button.toggle-btn{display:inline-block;vertical-align:middle;position:relative;padding:0 20px 0 50px;box-shadow:none;background:transparent;font-size:0.7778em;height:45px;border-radius:0}.nav-wrap .main-navigation button.toggle-btn::after{text-transform:uppercase}.main-navigation button.toggle-btn .toggle-bar{background:#fff;width:20px;height:2px;position:absolute;top:0;left:20px;bottom:0;margin:auto}.nav-wrap .main-navigation button.toggle-btn .toggle-bar:first-child{top:-10px}.nav-wrap .main-navigation button.toggle-btn .toggle-bar:last-child{bottom:-10px}.responsive-nav .close{color:inherit;margin-top:25px;margin-bottom:40px;margin-right:20px;width:25px;height:25px}.responsive-nav{position:fixed;display:block;width:320px;height:100%;top:0;left:0;background:var(--primary-color);z-index:999999;overflow:auto;display:none}.responsive-nav .main-navigation{text-align:right;width:320px}.responsive-nav .main-navigation ul{margin:0;padding:0;list-style:none;text-align:left}.responsive-nav .main-navigation ul li{display:block;margin:0;padding-right:0;font-weight:600;letter-spacing:1px}.responsive-nav .main-navigation ul li a{padding:15px 20px;border-bottom:1px solid rgba(255,255,255,0.15);width:100%}.responsive-nav .main-navigation ul li a::after{display:none}}@media screen and (max-width:767px){.container{max-width:420px}.single header.page-header{min-height:auto}.page-header .page-title{font-size:2em}.single header.page-header .container{max-width:420px}}</style><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" /></noscript><link rel="preload" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  media="all" data-minify="1" />
+
+		<!-- All in One SEO 4.9.4.1 - aioseo.com -->
+	<meta name="description" content="Avignon, located in the heart of Provence, Avignon is not just a city steeped in history; it&#039;s a gateway to a region brimming with cultural riches, natural beauty, and architectural marvels. This vibrant area, known for its compelling past, exquisite cuisine, and stunning landscapes, invites travelers to embark on a journey that traverses time, art," />
+	<meta name="robots" content="max-image-preview:large" />
+	<meta name="author" content="admin"/>
+	<link rel="canonical" href="/day-trips-from-avignon/" />
+	<meta name="generator" content="All in One SEO (AIOSEO) 4.9.4.1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="365-kw.com - All The Best Things to Do &amp; Trip Ideas" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Day Trips From Avignon - 365-kw.com" />
+		<meta property="og:description" content="Avignon, located in the heart of Provence, Avignon is not just a city steeped in history; it&#039;s a gateway to a region brimming with cultural riches, natural beauty, and architectural marvels. This vibrant area, known for its compelling past, exquisite cuisine, and stunning landscapes, invites travelers to embark on a journey that traverses time, art," />
+		<meta property="og:url" content="/day-trips-from-avignon/" />
+		<meta property="og:image" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<meta property="og:image:secure_url" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<meta property="og:image:width" content="250" />
+		<meta property="og:image:height" content="250" />
+		<meta property="article:published_time" content="2024-03-03T06:24:55+00:00" />
+		<meta property="article:modified_time" content="2024-03-27T14:56:23+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Day Trips From Avignon - 365-kw.com" />
+		<meta name="twitter:description" content="Avignon, located in the heart of Provence, Avignon is not just a city steeped in history; it&#039;s a gateway to a region brimming with cultural riches, natural beauty, and architectural marvels. This vibrant area, known for its compelling past, exquisite cuisine, and stunning landscapes, invites travelers to embark on a journey that traverses time, art," />
+		<meta name="twitter:image" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#blogposting","name":"Day Trips From Avignon - 365-kw.com","headline":"Top Day Trips From Avignon: Unforgettable Escapes","author":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"publisher":{"@id":"https:\/\/365-kw.com\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2024\/03\/DALL\u00b7E-2024-03-11-07.19.44-A-panoramic-view-of-Avignon-France-showcasing-the-historic-Papal-Palace-and-the-Pont-Saint-Benezet-Pont-dAvignon-extending-partially-across-the-R-1-2597307.webp","width":1792,"height":1024,"caption":"Day trips from Avignon"},"datePublished":"2024-03-03T09:24:55+03:00","dateModified":"2024-03-27T17:56:23+03:00","inLanguage":"en-US","mainEntityOfPage":{"@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#webpage"},"isPartOf":{"@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#webpage"},"articleSection":"Travel"},{"@type":"BreadcrumbList","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/365-kw.com#listItem","position":1,"name":"Home","item":"https:\/\/365-kw.com","nextItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","name":"Travel"}},{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","position":2,"name":"Travel","item":"https:\/\/365-kw.com\/category\/travel\/","nextItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#listItem","name":"Top Day Trips From Avignon: Unforgettable Escapes"},"previousItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com#listItem","name":"Home"}},{"@type":"ListItem","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#listItem","position":3,"name":"Top Day Trips From Avignon: Unforgettable Escapes","previousItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","name":"Travel"}}]},{"@type":"Organization","@id":"https:\/\/365-kw.com\/#organization","name":"365-kw.com","description":"All The Best Things to Do & Trip Ideas","url":"https:\/\/365-kw.com\/","logo":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2020\/11\/logotest_250.jpg","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#organizationLogo","width":250,"height":250},"image":{"@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#organizationLogo"}},{"@type":"Person","@id":"https:\/\/365-kw.com\/author\/admin\/#author","url":"https:\/\/365-kw.com\/author\/admin\/","name":"admin","image":{"@type":"ImageObject","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/21053879f058f77803446ad615232191?s=96&d=mm&r=g","width":96,"height":96,"caption":"admin"}},{"@type":"WebPage","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#webpage","url":"https:\/\/365-kw.com\/day-trips-from-avignon\/","name":"Day Trips From Avignon - 365-kw.com","description":"Avignon, located in the heart of Provence, Avignon is not just a city steeped in history; it's a gateway to a region brimming with cultural riches, natural beauty, and architectural marvels. This vibrant area, known for its compelling past, exquisite cuisine, and stunning landscapes, invites travelers to embark on a journey that traverses time, art,","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/365-kw.com\/#website"},"breadcrumb":{"@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#breadcrumblist"},"author":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"creator":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2024\/03\/DALL\u00b7E-2024-03-11-07.19.44-A-panoramic-view-of-Avignon-France-showcasing-the-historic-Papal-Palace-and-the-Pont-Saint-Benezet-Pont-dAvignon-extending-partially-across-the-R-1-2597307.webp","@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#mainImage","width":1792,"height":1024,"caption":"Day trips from Avignon"},"primaryImageOfPage":{"@id":"https:\/\/365-kw.com\/day-trips-from-avignon\/#mainImage"},"datePublished":"2024-03-03T09:24:55+03:00","dateModified":"2024-03-27T17:56:23+03:00"},{"@type":"WebSite","@id":"https:\/\/365-kw.com\/#website","url":"https:\/\/365-kw.com\/","name":"365-kw.com","description":"All The Best Things to Do & Trip Ideas","inLanguage":"en-US","publisher":{"@id":"https:\/\/365-kw.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+
+
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js" defer></script>
+<meta name="generator" content="WordPress 6.4.10" />
+<link rel='shortlink' href='/' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+
+
+<link rel="icon" href="/wp-content/uploads/2020/11/logotest_250-9194014-60x60.jpg" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" />
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" />
+<style type='text/css' media='all'>
+    :root {
+    --primary-font: Nunito Sans;
+    --secondary-font: Marcellus;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {        
+        font-size: 18px;
+    }
+
+    /*Typography*/
+
+    .site-branding .site-title{
+        font-size   : 30px;
+        font-family : Marcellus;
+        font-weight : 400;
+        font-style  : normal;
+    }
+
+    a.btn-readmore:hover:before, .btn-cta:hover:before, 
+    a.btn-readmore:hover:after, .btn-cta:hover:after {
+        background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="%239cbe9c" d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z" class=""></path></svg>');    
+    } 
+
+    .widget_bttk_testimonial_widget .bttk-testimonial-inner-holder:before, 
+    blockquote:before {
+        background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24"><path fill="%239cbe9c" d="M33.54,28.5a8,8,0,1,1-8.04,8,16,16,0,0,1,16-16A15.724,15.724,0,0,0,33.54,28.5Zm-12.04,8a8,8,0,0,1-16,0h0a16,16,0,0,1,16-16,15.724,15.724,0,0,0-7.96,8A7.989,7.989,0,0,1,21.5,36.5Z" transform="translate(-5.5 -20.5)"/></svg>');
+    };
+           
+    </style>		<style type="text/css" id="wp-custom-css">
+			.custom-logo-link {
+    margin: 0 auto;
+}
+
+.updated:not(.published) {
+	display: block;
+}
+
+.published {
+	display: none;
+}
+
+
+Conversation opened. 5 messages. All messages read.
+
+Skip to content
+Using Gmail with screen readers
+1 of 563
+re Using composequickly.com
+Inbox
+Neale Goldingay
+	
+	Apr 25, 2024, 3:49 AM (1 day ago)
+Hi Olivia Thanks for testing out Compose quickly. You may not know there is a beta feature that you can use to significantly increase the accuracy of the articl
+2
+Olivia Johns
+	
+	11:33 AM (1 hour ago)
+Hey Thanks for explaining Sounds good I`ve also experience issues with the view of Cons & Pros section, if I want to use article with Wordpress posting Looks li
+Neale Goldingay
+	
+Attachments12:06 PM (57 minutes ago)
+	
+to me
+I see what you mean, I designed it either to upload directly, which includes the css, or download the html file, and paste that into a html block, both include the css. 
+
+Your not the first to experience this I guess you are just copying the content across
+
+Add the css in the attached file to
+
+Admin > Appearance > Customize > Aditional CSS
+
+it wont change anything else on the site 
+
+Neale 
+ One attachment  •  Scanned by Gmail
+	
+Thanks, I'll check it out!
+Awesome, thanks!
+Thanks for the tip!
+
+.grid_container,
+.grid_row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 16px
+}
+
+.grid_container {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+.grid_content {
+	width: 100%;
+	grid-column: span 12;
+	padding-top: 25px;
+	padding-bottom: 25px
+}
+
+.faq_row,
+.funthings_row,
+.heading_row,
+.intro_row,
+.pros-n-cons_row {
+	width: 100%;
+	margin-bottom: 25px
+}
+
+.funthings_row {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+.grid_row,
+.mainImage {
+	max-width: 100%
+}
+
+.grid_row {
+	align-items: stretch;
+	grid-column: span 12;
+	margin-bottom: 25px
+}
+
+@media (max-width:479px) {
+	.griditem_6 {
+		grid-column: span 12
+	}
+
+	.faq_section {
+		margin-left: 1%;
+		margin-right: 1%
+	}
+
+	.getTable td,
+	.getTable th {
+		padding: 2px;
+		font-size: .8em
+	}
+}
+
+.consbullets li,
+.prosbullets li {
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 25px;
+	padding-left: 3em
+}
+
+@media (min-width:480px) {
+	.griditem_6 {
+		display: flex;
+		flex-direction: column;
+		grid-column: span 6
+	}
+
+	.faq_section {
+		margin-left: 10%;
+		margin-right: 10%
+	}
+}
+
+.consheader,
+.prosheader {
+	padding-left: 50px;
+	font-size: 32px
+}
+
+.griditem_6>div {
+	flex: 1
+}
+
+.prosheader {
+	color: #717B55
+}
+
+.consheader {
+	color: #ef3737
+}
+
+.consbullets,
+.prosbullets {
+	list-style-type: none;
+	padding-left: 0
+}
+
+.prosbullets li {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDU1LjQzMSA0NTUuNDMxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00MDUuNDkzIDQxMi43NjRjLTY5LjY4OSA1Ni44ODktMjg3LjI4OSA1Ni44ODktMzU1LjU1NiAwLTY5LjY4OS01Ni44ODktNjIuNTc4LTMwMC4wODkgMC0zNjQuMDg5czI5Mi45NzgtNjQgMzU1LjU1NiAwIDY5LjY4OSAzMDcuMjAxIDAgMzY0LjA4OXoiIGZpbGw9IiM4ZGM2NDAiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjI5LjEzOCAzMTMuMjA5Yy02Mi41NzggNDkuNzc4LTEzMi4yNjcgNzUuMzc4LTE5Ny42ODkgNzYuOC00OC4zNTYtODIuNDg5LTM4LjQtMjgzLjAyMiAxOC40ODktMzQxLjMzMyA1MS4yLTUyLjYyMiAyMTEuOTExLTYyLjU3OCAzMDQuMzU2LTI5Ljg2NyAyMi43NTUgOTMuODY3LTI0LjE3OCAyMTMuMzMzLTEyNS4xNTYgMjk0LjR6IiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0xOTUuMDA0IDM1NC40NTNjLTkuOTU2IDAtMTkuOTExLTQuMjY3LTI1LjYtMTIuOGwtNzkuNjQ0LTEwMi40Yy0xMS4zNzgtMTQuMjIyLTguNTMzLTM0LjEzMyA1LjY4OS00NS41MTFzMzQuMTMzLTguNTMzIDQ1LjUxMSA1LjY4OWw1NC4wNDQgNjkuNjg5IDExOS40NjctMTU1LjAyMmMxMS4zNzgtMTQuMjIyIDMxLjI4OS0xNy4wNjcgNDUuNTExLTUuNjg5czE3LjA2NyAzMS4yODkgNS42ODkgNDUuNTExTDIyMC42MDQgMzQxLjY1M2MtNy4xMTEgNy4xMTEtMTUuNjQ0IDEyLjgtMjUuNiAxMi44eiIvPjwvZz48L3N2Zz4=')
+}
+
+.consbullets li {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ1NS40MzEgNDU1LjQzMSIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDA1LjQ5MyA0MTIuNzY0Yy02OS42ODkgNTYuODg5LTI4Ny4yODkgNTYuODg5LTM1NS41NTYgMC02OS42ODktNTYuODg5LTYyLjU3OC0zMDAuMDg5IDAtMzY0LjA4OXMyOTIuOTc4LTY0IDM1NS41NTYgMCA2OS42ODkgMzA3LjIwMSAwIDM2NC4wODl6IiBmaWxsPSIjZjc3ZDc1Ii8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTIyOS4xMzggMzEzLjIwOWMtNjIuNTc4IDQ5Ljc3OC0xMzIuMjY3IDc1LjM3OC0xOTcuNjg5IDc2LjgtNDguMzU2LTgyLjQ4OS0zOC40LTI4My4wMjIgMTguNDg5LTM0MS4zMzMgNTEuMi01Mi42MjIgMjExLjkxMS02Mi41NzggMzA0LjM1Ni0yOS44NjcgMjIuNzU1IDkzLjg2Ny0yNC4xNzggMjEzLjMzMy0xMjUuMTU2IDI5NC40eiIgb3BhY2l0eT0iLjIiLz48cGF0aCBkPSJNMzM1LjgwNCAzMzUuOTY0Yy04LjUzMzMgOC41MzMtMjIuNzU2IDguNTMzLTMyLjcxMSAwbC03NS4zNzgtNzUuMzc4LTc1LjM3OCA3NS4zNzhjLTguNTMzIDguNTMzLTI0LjE3OCA4LjUzMy0zMi43MTEgMHMtOC41MzMtMjQuMTc4IDAtMzIuNzExbDc2LjgtNzUuMzc4LTc2LjgtNzUuMzc4Yy04LjUzMy04LjUzMy04LjUzMy0yMi43NTYgMC0zMi43MTEgOC41MzMtOC41MzMgMjQuMTc4LTguNTMzIDMyLjcxMSAwbDc1LjM3OCA3Ni44IDc1LjM3OC03Ni44YzguNTMzLTguNTMzIDIyLjc1Ni04LjUzMyAzMi43MTEgMCA4LjUzMyA4LjUzMyA4LjUzMyAyNC4xNzggMCAzMi43MTFsLTc1LjM3OCA3NS4zNzggNzUuMzc4IDc1LjM3OGM5Ljk1NiA5Ljk1NiA5Ljk1NiAyNC4xNzggMCAzMi43MTF6Ii8+PC9nPjwvc3ZnPgo=')
+}
+
+.table_row .getTable {
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	overflow-wrap: break-word
+}
+
+.table_row .getTable td,
+.table_row .getTable th {
+	border: 1px solid #000;
+	padding: 5px;
+	text-align: left
+}
+
+.table_row .getTable th {
+	background-color: #f2f2f2
+}
+
+#table {
+	margin-bottom: 35px
+}
+
+.grayboxshadow {
+	box-shadow: 0 0 5px gray;
+	padding: 25px
+}
+
+.centerText {
+	text-align: center
+}
+
+.sampleTitle {
+	color: #333;
+	padding: 0;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+i {
+	font-size: 105%;
+	color: #555;
+}
+
+.topImage {
+	float: right;
+	width: 50%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+@media (max-width: 750px) {
+	.topImage {
+		margin-top: 25px;
+		float: none;
+		width: 100%;
+	}
+}
+
+ol.prosbullets {
+	margin: 5px;
+}
+
+ol.consbullets {
+	margin: 5px;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script></head>
+
+<body class="post-template-default single single-post postid-214 single-format-standard wp-custom-logo underline rightsidebar" itemscope itemtype="http://schema.org/WebPage">
+
+    <div id="page" class="site"><a aria-label="skip to content" class="skip-link" href="#content">Skip to Content</a>
+        <div class="responsive-nav">
+            <nav id="res-navigation" class="main-navigation" role="navigation">
+        <div class="primary-menu-list main-menu-modal cover-modal" data-modal-target-string=".main-menu-modal">
+            <button class="close close-main-nav-toggle" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".main-menu-modal"></button>
+            <div class="mobile-menu" aria-label="Mobile">
+                <div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu main-menu-modal"><li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="/">Home</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-42"><a rel="privacy-policy" href="/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/contact-us/">Contact Us</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/dmca/">DMCA</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="/terms-and-conditions/">Terms And Conditions</a></li>
+</ul></div>            </div>
+        </div>
+    </nav><!-- #site-navigation -->
+                        </div> <!-- .responsive-nav -->
+    
+    <header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="container">
+            <div class="header-main">
+                        <div class="site-branding" itemscope itemtype="http://schema.org/Organization">
+            <a href="/" class="custom-logo-link" rel="home"><img width="250" height="250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%20250'%3E%3C/svg%3E" class="custom-logo" alt="365-kw.com" decoding="async" fetchpriority="high" data-lazy-srcset="/wp-content/uploads/2020/11/logotest_250.jpg 250w, /wp-content/uploads/2020/11/logotest_250-150x150.jpg 150w, /wp-content/uploads/2020/11/logotest_250-60x60.jpg 60w" data-lazy-sizes="(max-width: 250px) 100vw, 250px" data-lazy-src="/wp-content/uploads/2020/11/logotest_250.jpg" /><noscript><img width="250" height="250" src="/wp-content/uploads/2020/11/logotest_250.jpg" class="custom-logo" alt="365-kw.com" decoding="async" fetchpriority="high" srcset="/wp-content/uploads/2020/11/logotest_250.jpg 250w, /wp-content/uploads/2020/11/logotest_250-150x150.jpg 150w, /wp-content/uploads/2020/11/logotest_250-60x60.jpg 60w" sizes="(max-width: 250px) 100vw, 250px" /></noscript></a>                    <p class="site-title" itemprop="name"><a href="/" rel="home" itemprop="url">365-kw.com</a></p>
+                                    <p class="site-description" itemprop="description">All The Best Things to Do &amp; Trip Ideas</p>
+                        </div>    
+                                </div><!-- .header-main -->
+            <div class="nav-wrap">
+                	<nav id="site-navigation" class="main-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <button class="toggle-btn" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+        </button>
+        <div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-42"><a rel="privacy-policy" href="/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/dmca/">DMCA</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="/terms-and-conditions/">Terms And Conditions</a></li>
+</ul></div>	</nav><!-- #site-navigation -->
+                                </div><!-- .nav-wrap -->
+        </div><!-- .container -->    
+    </header>
+<div id="content" class="site-content">            <header class="page-header" style="background-image: url( '/wp-content/uploads/2024/03/DALL·E-2024-03-11-07.19.44-A-panoramic-view-of-Avignon-France-showcasing-the-historic-Papal-Palace-and-the-Pont-Saint-Benezet-Pont-dAvignon-extending-partially-across-the-R-1-2597307-1792x700.webp' );">
+                <div class="container">
+        			<span class="category" itemprop="about"><a href="/category/travel/" rel="category tag">Travel</a></span><h1 class="page-title">Top Day Trips From Avignon: Unforgettable Escapes</h1><div class="entry-meta"><span class="byline" itemprop="author" itemscope itemtype="https://schema.org/Person"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><defs><style>.auta{fill:none;}.auta,.autb{stroke:rgba(0,0,0,0);}.autb{fill:#ccc6c8;}</style></defs><g transform="translate(0.5 0.5)"><path class="auta" d="M0,0H18V18H0Z"></path><g transform="translate(1.5 1.5)"><path class="autb" d="M9.5,2A7.5,7.5,0,1,0,17,9.5,7.5,7.5,0,0,0,9.5,2ZM5.8,14.21c.322-.675,2.287-1.335,3.7-1.335s3.382.66,3.7,1.335a5.944,5.944,0,0,1-7.395,0Zm8.468-1.088c-1.073-1.3-3.675-1.747-4.77-1.747s-3.7.443-4.77,1.747a6,6,0,1,1,9.54,0Z" transform="translate(-2 -2)"></path><path class="autb" d="M11.125,6A2.625,2.625,0,1,0,13.75,8.625,2.618,2.618,0,0,0,11.125,6Zm0,3.75A1.125,1.125,0,1,1,12.25,8.625,1.123,1.123,0,0,1,11.125,9.75Z" transform="translate(-3.625 -3)"></path></g></g></svg><span class="author" itemprop="name"><a class="url fn n" href="/author/admin/" itemprop="url">admin</a></span></span><span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/day-trips-from-avignon/" rel="bookmark"><time class="entry-date published updated" datetime="2024-03-27T17:56:23+03:00" itemprop="dateModified">27.03.2024</time></time><time class="updated" datetime="2024-03-03T09:24:55+03:00" itemprop="datePublished">03.03.2024</time></a></span><span class="comment-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.943 15.465"><defs><style>.co{fill:none;stroke:#ccc6c8;stroke-width:1.3px;}</style></defs><path class="co" d="M15.425,11.636H12.584v2.03L9.2,11.636H1.218A1.213,1.213,0,0,1,0,10.419v-9.2A1.213,1.213,0,0,1,1.218,0H15.425a1.213,1.213,0,0,1,1.218,1.218v9.2A1.213,1.213,0,0,1,15.425,11.636Z" transform="translate(0.65 0.65)"></path></svg><a href="/day-trips-from-avignon/">No Comment<span class="screen-reader-text"> on Top Day Trips From Avignon: Unforgettable Escapes</span></a></span></div><div class="breadcrumb-wrapper"><div class="container" >
+                <div id="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList"> 
+                    <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                        <span class="separator"><span class="separator"><i class="fa fa-angle-right"></i></span></span>
+                    </span> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/category/travel/"><span itemprop="name">Travel </span></a><meta itemprop="position" content="2" /><span class="separator"><span class="separator"><i class="fa fa-angle-right"></i></span></span></span> <span class="current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/day-trips-from-avignon/"><span itemprop="name">Top Day Trips From Avignon: Unforgettable Escapes</span></a><meta itemprop="position" content="3" /></span></div></div></div><!-- .breadcrumb-wrapper -->                </div>
+    		</header><!-- .page-header -->
+                    <div class="container">
+        
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+            
+<article id="post-214" class="post-214 post type-post status-publish format-standard has-post-thumbnail hentry category-travel">
+	    <div class="entry-content" itemprop="text">
+		<p><span style="font-weight: 300;">Avignon, located in the heart of Provence, Avignon is not just a city steeped in history; it&#8217;s a gateway to a region brimming with cultural riches, natural beauty, and architectural marvels. This vibrant area, known for its compelling past, exquisite cuisine, and stunning landscapes, invites travelers to embark on a journey that traverses time, art, and the essence of French joie de vivre. From the ancient Roman ruins that whisper tales of a bygone era to the lush vineyards that adorn the countryside, each day trips from Avignon offers a unique glimpse into the myriad facets of Southern France.</span></p>
+<p><span style="font-weight: 300;">This journey through Avignon and its environs is an invitation to immerse oneself in the unparalleled beauty of Provence, where every stone, every street, and every vista tells a story of centuries past and the enduring allure of French culture. It&#8217;s a voyage that promises not only to uncover the rich heritage of the region but also to inspire with its contemporary vitality, showcasing the timeless appeal of Southern France.</span></p>
+<h2><b>Cassis: A Coastal Gem</b></h2>
+<p><span style="font-weight: 300;"><a href="https://en.wikipedia.org/wiki/Cassis">Cassis</a>, a charming coastal town nestled between dramatic cliffs and sheltered inlets, is renowned for its picturesque port, vibrant waterfront cafes, and pastel-colored houses. Its origins as a quaint fishing village are still palpable despite its popularity among tourists. A stroll along the harbor reveals a lively atmosphere, where the day&#8217;s fresh catch is served at local restaurants, offering a taste of authentic Provençal cuisine.</span></p>
+<p><span style="font-weight: 300;">The town&#8217;s beaches, such as Plage de la Grande Mer, provide a serene escape with their clear, turquoise waters, while the local vineyards that drape over the surrounding hills invite visitors to indulge in wine tastings, celebrating the region&#8217;s esteemed production of white and rosé wines.</span></p>
+<figure id="attachment_227" aria-describedby="caption-attachment-227" style="width: 1200px" class="wp-caption aligncenter"><img decoding="async" class="wp-image-227 size-full" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20835'%3E%3C/svg%3E" alt="Day trips from Avignon" width="1200" height="835" data-lazy-srcset="/wp-content/uploads/2024/03/image-80-8492257.webp 1200w, /wp-content/uploads/2024/03/image-80-8492257-300x209.webp 300w, /wp-content/uploads/2024/03/image-80-8492257-1024x713.webp 1024w, /wp-content/uploads/2024/03/image-80-8492257-768x534.webp 768w, /wp-content/uploads/2024/03/image-80-8492257-86x60.webp 86w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="/wp-content/uploads/2024/03/image-80-8492257.webp" /><noscript><img decoding="async" class="wp-image-227 size-full" src="/wp-content/uploads/2024/03/image-80-8492257.webp" alt="Day trips from Avignon" width="1200" height="835" srcset="/wp-content/uploads/2024/03/image-80-8492257.webp 1200w, /wp-content/uploads/2024/03/image-80-8492257-300x209.webp 300w, /wp-content/uploads/2024/03/image-80-8492257-1024x713.webp 1024w, /wp-content/uploads/2024/03/image-80-8492257-768x534.webp 768w, /wp-content/uploads/2024/03/image-80-8492257-86x60.webp 86w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript><figcaption id="caption-attachment-227" class="wp-caption-text">Cassis &#8211; Source: Tourmag</figcaption></figure>
+<h3><b>The Calanques National Park: Nature&#8217;s Masterpiece</b></h3>
+<p><span style="font-weight: 300;">The real treasure, however, lies just beyond Cassis, where the Calanques National Park stretches along the coast. These limestone cliffs and deep, narrow inlets form a dramatic landscape that can be explored by land or sea. The calanques, sculpted by the elements over millennia, offer a rugged natural beauty that contrasts sharply with the tranquil waters of the Mediterranean.</span></p>
+<p><span style="font-weight: 300;">Hiking through the park reveals breathtaking vistas and hidden bays, each with its unique charm. Trails vary in difficulty, allowing for leisurely walks or more challenging treks. The Calanque de Port-Miou, Calanque de Port-Pin, and Calanque d&#8217;En-Vau are among the most iconic, with their striking turquoise waters and secluded beaches.</span></p>
+<p><span style="font-weight: 300;">For those preferring to experience the calanques from the water, boat tours depart from Cassis, providing a different perspective on the majestic cliffs and allowing access to bays that are otherwise unreachable by land. Kayaking and paddleboarding offer more intimate encounters with the natural beauty of the park, enabling adventurers to navigate the serene inlets at their own pace.</span></p>
+<p><span style="font-weight: 300;">A day trip to Cassis and the Calanques National Park from Avignon requires some planning. The journey by car takes approximately 1.5 hours, transporting visitors from the historical allure of Avignon to the breathtaking landscapes of the coast. While in Cassis, exploring the town&#8217;s historical sites, such as the Château de Cassis, adds a cultural dimension to the visit.</span></p>
+<p><span style="font-weight: 300;">For the Calanques, it&#8217;s advisable to check the park&#8217;s regulations and accessibility options beforehand, as certain areas may be closed during high-risk fire seasons or require specific permits for access. Regardless of how you choose to explore, whether by land or sea, the experience promises to be memorable, offering a blend of natural beauty, physical activity, and relaxation.</span></p>
+<h2><b>La Roque-Sur-Cèze and Cascades du Sautadet</b></h2>
+<p><span style="font-weight: 300;">La Roque-Sur-Cèze and the Cascades du Sautadet are among the most enchanting day trips from Avignon, offering a blend of natural beauty, historical charm, and the soothing presence of water in various forms. This exploration into one of France&#8217;s most beautiful villages, coupled with the awe-inspiring sight of the Cascades du Sautadet, provides an ideal setting for a relaxing day immersed in nature.</span></p>
+<h3><b>A Village Suspended in Time</b></h3>
+<p><span style="font-weight: 300;">La Roque-Sur-Cèze is not just a village; it&#8217;s a portal to the past. Perched atop a rocky outcrop overlooking the Cèze River, this medieval village is characterized by its cobblestone streets, ancient stone houses, and the remnants of its feudal castle. The village is rightfully listed among &#8220;Les Plus Beaux Villages de France&#8221; (The Most Beautiful Villages of France), a testament to its unspoiled beauty and historical significance.</span></p>
+<p><span style="font-weight: 300;">Walking through La Roque-Sur-Cèze is like meandering through a living museum, with each turn and alleyway revealing a piece of history. The Romanesque chapel and the twelfth-century bridge, Pont Charles Martel, spanning the Cèze River, are highlights that visitors should not miss. The bridge, with its arched structure seemingly defying time and elements, offers stunning views of the river and the surrounding natural landscape.</span></p>
+<figure id="attachment_228" aria-describedby="caption-attachment-228" style="width: 864px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-228" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20864%20576'%3E%3C/svg%3E" alt="La Roque-Sur-Cèze" width="864" height="576" data-lazy-srcset="/wp-content/uploads/2024/03/image-81-2914926.webp 864w, /wp-content/uploads/2024/03/image-81-2914926-300x200.webp 300w, /wp-content/uploads/2024/03/image-81-2914926-768x512.webp 768w, /wp-content/uploads/2024/03/image-81-2914926-90x60.webp 90w, /wp-content/uploads/2024/03/image-81-2914926-370x247.webp 370w, /wp-content/uploads/2024/03/image-81-2914926-776x517.webp 776w" data-lazy-sizes="(max-width: 864px) 100vw, 864px" data-lazy-src="/wp-content/uploads/2024/03/image-81-2914926.webp" /><noscript><img decoding="async" class="size-full wp-image-228" src="/wp-content/uploads/2024/03/image-81-2914926.webp" alt="La Roque-Sur-Cèze" width="864" height="576" srcset="/wp-content/uploads/2024/03/image-81-2914926.webp 864w, /wp-content/uploads/2024/03/image-81-2914926-300x200.webp 300w, /wp-content/uploads/2024/03/image-81-2914926-768x512.webp 768w, /wp-content/uploads/2024/03/image-81-2914926-90x60.webp 90w, /wp-content/uploads/2024/03/image-81-2914926-370x247.webp 370w, /wp-content/uploads/2024/03/image-81-2914926-776x517.webp 776w" sizes="(max-width: 864px) 100vw, 864px" /></noscript><figcaption id="caption-attachment-228" class="wp-caption-text">La Roque-Sur-Cèze &#8211; Source: Wikipedia</figcaption></figure>
+<h3><b>Cascades du Sautadet: Nature&#8217;s Powerful Beauty</b></h3>
+<p><span style="font-weight: 300;">Just a short distance from the village, the Cascades du Sautadet present a stark contrast to the tranquil beauty of La Roque-Sur-Cèze. These waterfalls are a spectacular natural phenomenon, where the Cèze River cascades over a series of limestone rocks, creating a powerful and mesmerizing display of water&#8217;s force. The site is both beautiful and perilous, with its swirling pools and potent currents carving out the unique landscape over thousands of years.</span></p>
+<p><span style="font-weight: 300;">Visitors to the Cascades du Sautadet can admire the waterfalls from several vantage points, each offering a different perspective on this natural wonder. While swimming in the cascades is highly dangerous and strictly prohibited, the surrounding area offers plenty of spots for picnicking, sunbathing, and simply enjoying the serene ambiance created by the sound of rushing water.</span></p>
+<p><span style="font-weight: 300;">A day trip to La Roque-Sur-Cèze and the Cascades du Sautadet from Avignon is an opportunity to experience the diverse beauty of the Provence region. Start your visit in the morning by exploring the village, allowing yourself to be transported back in time as you wander through its streets and discover its historical treasures. The peaceful atmosphere of La Roque-Sur-Cèze, combined with its picturesque setting, makes for a truly relaxing experience.</span></p>
+<p><span style="font-weight: 300;">In the afternoon, make your way to the Cascades du Sautadet to witness the contrasting power of nature. The walk from the village to the cascades is in itself a journey through the beautiful countryside, highlighting the rich flora and fauna of the region. Upon reaching the cascades, take a moment to appreciate the sheer force and beauty of nature as the Cèze River makes its dramatic descent.</span></p>
+<p><span style="font-weight: 300;">Visiting La Roque-Sur-Cèze and the Cascades du Sautadet offers more than just a day trip; it&#8217;s a journey through the heart of Provence, showcasing the region&#8217;s natural beauty, historical depth, and the timeless charm of its villages. Whether you&#8217;re a nature enthusiast, history buff, or simply in search of a peaceful retreat from the hustle and bustle of daily life, this trip promises a fulfilling experience.</span></p>
+<p><span style="font-weight: 300;">From the serene streets of La Roque-Sur-Cèze to the dynamic beauty of the Cascades du Sautadet, this adventure highlights the multifaceted allure of Provence. It&#8217;s a reminder of the region&#8217;s ability to enchant and inspire, offering visitors a glimpse into a world where nature and history coexist in perfect harmony.</span></p>
+<h2><b>Glanum and the Thouzon Caves</b></h2>
+<p><span style="font-weight: 300;">Step back in time with a visit to the ancient archaeological site of Glanum and explore the geological wonders of Thouzon Caves.</span></p>
+<p><span style="font-weight: 300;">Venturing from Avignon to the ancient site of Glanum and the Thouzon Caves offers a profound journey through time and nature, bridging the gap between human history and geological marvels. This day trip encapsulates the essence of Provence’s diverse heritage, showcasing the region&#8217;s rich past and the natural phenomena that have shaped its landscape.</span></p>
+<h3><b>Glanum: A Glimpse into Ancient Civilization</b></h3>
+<p><span style="font-weight: 300;">Glanum is found at the foot of the Alpilles mountains, the archaeological site of Glanum reveals the remnants of a once-thriving Greco-Roman city. Founded in the 6th century BCE by a Celtic tribe, Glanum prospered under Roman rule from the 1st century BCE, leaving behind a legacy etched in stone and history.</span></p>
+<p><span style="font-weight: 300;">Visiting Glanum is like walking through a portal to the ancient world. The site is home to remarkably preserved monuments that speak volumes about the social, political, and religious life of its inhabitants. The Triumphal Arch and the Mausoleum of the Julii stand as gatekeepers to the past, offering an awe-inspiring welcome to explorers of history. These structures are not merely ruins; they are testaments to the architectural and artistic prowess of ancient civilizations.</span></p>
+<p><span style="font-weight: 300;">The excavation of Glanum reveals a complex urban layout, with houses, temples, marketplaces, and baths that outline daily life in the ancient city. As you wander through the ruins, you can almost hear the echoes of the past, from the bustling activity of the forum to the solemn rituals of the sanctuaries.</span></p>
+<h3><b>The Thouzon Caves: Journey to the Earth’s Depths</b></h3>
+<p><span style="font-weight: 300;">A contrast to the man-made wonders of Glanum, the Thouzon Caves (Le Gouffre de Thouzon) offer a journey into the natural world&#8217;s artistry. Located near Le Thor, just a short drive from Avignon, these caves are a testament to the Earth’s geological processes, sculpting beauty beneath the surface over millions of years.</span></p>
+<p><span style="font-weight: 300;">The Thouzon Caves are renowned for their delicate formations of stalactites and stalagmites, which create an otherworldly landscape in the cave’s interior. A guided tour through the illuminated paths reveals chambers filled with an array of calcite formations, each telling a story of time, water, and mineral deposits. The highlight is the “Golden Chamber,” where the play of light and shadows casts a magical glow on the golden-hued formations, creating a spectacle of natural artistry.</span></p>
+<p><span style="font-weight: 300;">The discovery of the Thouzon Caves in 1902 opened a window into the subterranean world, offering insights into the region&#8217;s geological history. The caves are also a reminder of the natural processes that continue to shape our planet, hidden from the human eye.</span></p>
+<figure id="attachment_229" aria-describedby="caption-attachment-229" style="width: 768px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-229" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20512'%3E%3C/svg%3E" alt="The Thouzon Caves" width="768" height="512" data-lazy-srcset="/wp-content/uploads/2024/03/image-82-3102281.webp 768w, /wp-content/uploads/2024/03/image-82-3102281-300x200.webp 300w, /wp-content/uploads/2024/03/image-82-3102281-90x60.webp 90w, /wp-content/uploads/2024/03/image-82-3102281-370x247.webp 370w" data-lazy-sizes="(max-width: 768px) 100vw, 768px" data-lazy-src="/wp-content/uploads/2024/03/image-82-3102281.webp" /><noscript><img decoding="async" class="size-full wp-image-229" src="/wp-content/uploads/2024/03/image-82-3102281.webp" alt="The Thouzon Caves" width="768" height="512" srcset="/wp-content/uploads/2024/03/image-82-3102281.webp 768w, /wp-content/uploads/2024/03/image-82-3102281-300x200.webp 300w, /wp-content/uploads/2024/03/image-82-3102281-90x60.webp 90w, /wp-content/uploads/2024/03/image-82-3102281-370x247.webp 370w" sizes="(max-width: 768px) 100vw, 768px" /></noscript><figcaption id="caption-attachment-229" class="wp-caption-text">The Thouzon Caves &#8211; Source: Luberon</figcaption></figure>
+<h3><b>Bridging Time and Nature</b></h3>
+<p><span style="font-weight: 300;">A day trip to Glanum and the Thouzon Caves from Avignon is a journey that bridges millennia, from the ancient civilizations that once thrived in Provence to the natural wonders that predate human history. This exploration offers a unique perspective on the passage of time, seen through the lens of human achievements and natural phenomena.</span></p>
+<p><span style="font-weight: 300;">Visitors to these sites are invited to contemplate the legacy of the past, both built and born of the earth. The experience is a powerful reminder of our place in the continuum of history and the natural world. It encourages a deeper appreciation for the forces that have shaped the landscape of Provence and the cultures that have left their mark on this land.</span></p>
+<h3><b>Arles and the Camargue</b></h3>
+<p><span style="font-weight: 300;">Experience art, history, and nature in Arles, followed by the wild beauty of the Camargue, famous for its pink flamingos, white horses, and bulls</span></p>
+<p><span style="font-weight: 300;">A journey to Arles and the Camargue region from Avignon is an exquisite blend of art, history, and untamed natural beauty. This trip not only brings visitors face to face with the monumental history of Arles but also introduces them to the wild landscapes of the Camargue, creating a rich tapestry of experiences that exemplify the soul of Southern France.</span></p>
+<h3><b>Arles: A Canvas of History and Art</b></h3>
+<p><span style="font-weight: 300;">Arles, a city that thrives on its Roman heritage and its pivotal role in the story of modern art, offers a deep dive into the layers of history that define this region. The city&#8217;s Roman amphitheater, still in use today, whispers tales of gladiatorial battles to those who walk its ancient stands, while the Alyscamps, a Roman necropolis, serves as a serene promenade lined with sarcophagi, echoing the city&#8217;s long history.</span></p>
+<p><span style="font-weight: 300;">But Arles is perhaps best known for its connection to Vincent Van Gogh, who was profoundly inspired by the Provencal light and landscape. Visitors can follow in Van Gogh&#8217;s footsteps, visiting the locations where he painted some of his most iconic works, including the yellow café at night, the starry night over the Rhone, and the hospital garden. Arles transforms into a living museum where art and history converge, allowing visitors to step directly into the scenes captured by Van Gogh&#8217;s vibrant palette.</span></p>
+<h3><b>The Camargue: Wild Beauty at the Edge of the Sea</b></h3>
+<p><span style="font-weight: 300;">From the cultural richness of Arles, the journey leads to the natural splendors of the Camargue, a vast wetland known for its unique ecosystem. This region, where the Rhone meets the Mediterranean, is a place of stark beauty and biodiversity, famous for its pink flamingos, white Camargue horses, and black bulls. The landscape of the Camargue is unlike any other in France, with salt flats, marshes, and rice paddies stretching out to the horizon, offering a sanctuary for a wide range of bird species.</span></p>
+<p><span style="font-weight: 300;">The best way to experience the Camargue is to embrace its wildness. Whether by taking a guided tour, horseback riding, or simply walking along the paths that crisscross the park, visitors are treated to a spectacle of nature that changes with the seasons. In spring, the marshes are alive with the sound of migratory birds; in summer, the salt flats crystallize under the sun; and in autumn, the rice fields turn golden. Each visit promises a unique experience, a glimpse into the delicate balance of this unique ecosystem.</span></p>
+<h3><b>Bridging Two Worlds</b></h3>
+<p><span style="font-weight: 300;">The transition from the historic streets of Arles to the natural expanses of the Camargue represents more than a mere change of scenery. It signifies a journey through time and space, from the human-centric world of art and architecture to the wild, untamed beauty of nature. This trip offers a holistic experience of the Provencal landscape, showcasing the diversity that defines Southern France.</span></p>
+<p><span style="font-weight: 300;">In Arles, history is tangible, with every stone telling a story of conquest, creativity, and community. The city serves as a reminder of the human capacity to create beauty and meaning, reflected in its ancient monuments and the artworks inspired by its streets and skies. In contrast, the Camargue offers a moment to reflect on the beauty of the natural world, untouched and unshaped by human hands, where life follows ancient rhythms dictated by water and weather.</span></p>
+<h2><b>L’isle-sur-la-Sorgue and Fontaine de Vaucluse</b></h2>
+<p><span style="font-weight: 300;">Embarking on a day trip to L&#8217;Isle-sur-la-Sorgue and Fontaine de Vaucluse from Avignon offers a unique journey into the heart of Provence, where the blend of natural beauty and cultural heritage creates an enchanting experience. This voyage explores the charm of L&#8217;Isle-sur-la-Sorgue, renowned as the antique capital of Provence, and the picturesque village of Fontaine de Vaucluse, with its mysterious spring that has captivated visitors for centuries.</span></p>
+<figure id="attachment_230" aria-describedby="caption-attachment-230" style="width: 1024px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-230" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20682'%3E%3C/svg%3E" alt="Fontaine de Vaucluse" width="1024" height="682" data-lazy-srcset="/wp-content/uploads/2024/03/image-83-3380867.webp 1024w, /wp-content/uploads/2024/03/image-83-3380867-300x200.webp 300w, /wp-content/uploads/2024/03/image-83-3380867-768x512.webp 768w, /wp-content/uploads/2024/03/image-83-3380867-90x60.webp 90w, /wp-content/uploads/2024/03/image-83-3380867-370x247.webp 370w, /wp-content/uploads/2024/03/image-83-3380867-776x517.webp 776w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="/wp-content/uploads/2024/03/image-83-3380867.webp" /><noscript><img decoding="async" class="size-full wp-image-230" src="/wp-content/uploads/2024/03/image-83-3380867.webp" alt="Fontaine de Vaucluse" width="1024" height="682" srcset="/wp-content/uploads/2024/03/image-83-3380867.webp 1024w, /wp-content/uploads/2024/03/image-83-3380867-300x200.webp 300w, /wp-content/uploads/2024/03/image-83-3380867-768x512.webp 768w, /wp-content/uploads/2024/03/image-83-3380867-90x60.webp 90w, /wp-content/uploads/2024/03/image-83-3380867-370x247.webp 370w, /wp-content/uploads/2024/03/image-83-3380867-776x517.webp 776w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript><figcaption id="caption-attachment-230" class="wp-caption-text">Fontaine de Vaucluse &#8211; Source: The Luberon</figcaption></figure>
+<h3><b>L&#8217;Isle-sur-la-Sorgue: The Antique Capital of Provence</b></h3>
+<p><span style="font-weight: 300;">L&#8217;Isle-sur-la-Sorgue, often referred to as the &#8220;Venice of Provence&#8221; due to its canals that wind through the town, is a haven for antique lovers and those who appreciate the finer things in life. The town is famous for its numerous antique shops and weekly markets, where one can find a myriad of treasures ranging from fine art and furniture to vintage collectibles and Provencal fabrics.</span></p>
+<p><span style="font-weight: 300;">The heart of L&#8217;Isle-sur-la-Sorgue&#8217;s appeal lies in its vibrant market scene. The Sunday market, in particular, is an event not to be missed. It combines a traditional Provencal market, offering local produce, spices, and textiles, with an expansive antique market, drawing collectors and enthusiasts from around the world. Strolling through the market, visitors can revel in the bustling atmosphere, engage with local artisans, and perhaps find a unique piece to take home.</span></p>
+<p><span style="font-weight: 300;">Beyond the markets, the town&#8217;s picturesque setting, with waterwheels dotted along the canals, adds to its charm. These ancient waterwheels, once used for silk manufacturing and paper mills, are a testament to the town&#8217;s industrial heritage and contribute to the scenic beauty that surrounds the cafes and shops lining the waterways.</span></p>
+<h3><b>Fontaine de Vaucluse: A Source of Inspiration</b></h3>
+<p><span style="font-weight: 300;">A short drive from L&#8217;Isle-sur-la-Sorgue lies Fontaine de Vaucluse, a village located at the foot of a steep cliff from which springs the Sorgue River. The source of this river, one of the largest springs in the world, has been a subject of fascination and mystery for centuries, inspiring poets and writers such as Petrarch and René Char.</span></p>
+<p><span style="font-weight: 300;">Visiting Fontaine de Vaucluse is an opportunity to witness the powerful force of nature as water gushes from the depths of the earth, creating a serene yet awe-inspiring spectacle. The exact depth of the spring remains unknown, adding to the mystique of this natural wonder. A path leads visitors from the village to the spring, offering a pleasant walk alongside the crystal-clear waters of the Sorgue River, with opportunities to stop at paper mills and glass-blowing workshops along the way.</span></p>
+<p><span style="font-weight: 300;">The village itself, though small, is steeped in history, with the ruins of the Bishop’s castle overlooking the valley and the Petrarch museum, dedicated to the Italian poet who spent much of his life in the area. The tranquility and beauty of Fontaine de Vaucluse have made it a muse for artists and a peaceful retreat for those seeking inspiration or a moment of reflection.</span></p>
+<h3><b>Bridging History, Culture, and Natural Beauty</b></h3>
+<p><span style="font-weight: 300;">A day trip to L&#8217;Isle-sur-la-Sorgue and Fontaine de Vaucluse from Avignon is a journey that bridges history, culture, and natural beauty. It encapsulates the essence of Provence, offering a glimpse into the region&#8217;s vibrant market culture, its artistic heritage, and the awe-inspiring power of the natural world.</span></p>
+<p><span style="font-weight: 300;">Visitors leave with a deeper appreciation for the traditions that have shaped this region, from the ancient craft of silk-making to the enduring legacy of poets and artists who have found inspiration in the landscape of Provence. This trip not only offers a window into the soul of Southern France but also invites travelers to connect with the past, engage with the present, and perhaps find a piece of Provence to carry with them into the future.</span></p>
+<h2><b>Aix-en-Provence</b></h2>
+<p><span style="font-weight: 300;"><a href="https://www.aixenprovencetourism.com/en/aix-en-provence-en/">Aix-en-Provence</a>, often referred to as the city of art and light, is a vibrant destination that embodies the spirit of Southern France. Its lively streets, dotted with an array of markets, art galleries, and charming cafes, offer visitors a rich tapestry of cultural and sensory experiences. A day trip to Aix-en-Provence from Avignon unveils a world where historical elegance meets contemporary dynamism.</span></p>
+<h3><b>Markets of Aix-en-Provence: A Feast for the Senses</b></h3>
+<p><span style="font-weight: 300;">The markets of Aix-en-Provence are a cornerstone of local life, where the colors, scents, and flavors of Provence come alive. The daily market at Place Richelme is a culinary treasure trove, offering fresh local produce, including fruits, vegetables, cheeses, and olives, that capture the essence of Provencal cuisine. The textile market on Cours Mirabeau, held on Tuesdays, Thursdays, and Saturdays, presents a selection of fabrics, clothing, and accessories, showcasing the craftsmanship and style of the region.</span></p>
+<figure id="attachment_231" aria-describedby="caption-attachment-231" style="width: 1024px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-231" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20683'%3E%3C/svg%3E" alt="Markets of Aix-en-Provence" width="1024" height="683" data-lazy-srcset="/wp-content/uploads/2024/03/image-84-3075298.webp 1024w, /wp-content/uploads/2024/03/image-84-3075298-300x200.webp 300w, /wp-content/uploads/2024/03/image-84-3075298-768x512.webp 768w, /wp-content/uploads/2024/03/image-84-3075298-90x60.webp 90w, /wp-content/uploads/2024/03/image-84-3075298-370x247.webp 370w, /wp-content/uploads/2024/03/image-84-3075298-776x517.webp 776w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="/wp-content/uploads/2024/03/image-84-3075298.webp" /><noscript><img decoding="async" class="size-full wp-image-231" src="/wp-content/uploads/2024/03/image-84-3075298.webp" alt="Markets of Aix-en-Provence" width="1024" height="683" srcset="/wp-content/uploads/2024/03/image-84-3075298.webp 1024w, /wp-content/uploads/2024/03/image-84-3075298-300x200.webp 300w, /wp-content/uploads/2024/03/image-84-3075298-768x512.webp 768w, /wp-content/uploads/2024/03/image-84-3075298-90x60.webp 90w, /wp-content/uploads/2024/03/image-84-3075298-370x247.webp 370w, /wp-content/uploads/2024/03/image-84-3075298-776x517.webp 776w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript><figcaption id="caption-attachment-231" class="wp-caption-text">Markets of Aix-en-Provence &#8211; Source: Le Long Weekend</figcaption></figure>
+<h3><b>Art Galleries: A Journey Through Creativity</b></h3>
+<p><span style="font-weight: 300;">Aix-en-Provence&#8217;s art scene is a vibrant reflection of its history as a muse for artists. The city is home to the Musée Granet, which houses an impressive collection of works ranging from the Renaissance to modern art, including pieces by Cézanne, a native of Aix. The Atelier Cézanne, the artist&#8217;s former studio, offers a deeply personal glimpse into his life and work, preserved as he left it. Exploring the city&#8217;s art galleries, one encounters a diverse array of artistic expressions that span centuries and styles, affirming Aix-en-Provence&#8217;s status as a cultural hub.</span></p>
+<h3><b>Charming Cafes: The Heartbeat of Aix-en-Provence</b></h3>
+<p><span style="font-weight: 300;">The cafes of Aix-en-Provence are more than just places to enjoy a coffee; they are social institutions that encapsulate the joie de vivre of the city. The iconic Les Deux Garçons, a café that has hosted figures such as Cézanne, Émile Zola, and Ernest Hemingway, offers a historic setting to savor a café au lait or a glass of pastis. Scattered throughout the city, from the bustling Place de l&#8217;Hôtel de Ville to the serene squares hidden away in the maze of streets, cafes offer a moment of relaxation and an opportunity to engage with the rhythm of local life.</span></p>
+<h2><b>Uzès</b></h2>
+<p><span style="font-weight: 300;">Experience the Renaissance architecture and historical heritage of Uzès, including the Place aux Herbes and Duché d’Uzès. </span></p>
+<p><span style="font-weight: 300;">Uzès, a gem located in the Gard department of Southern France, invites visitors on a journey through time where Renaissance architecture and historical heritage blend seamlessly with the charm of Provencal life. This picturesque town, with its well-preserved medieval streets and grand ducal palace, encapsulates the essence of French elegance and history, making it a must-visit for those exploring the region.</span></p>
+<h3><b>Renaissance Architecture and the Historical Tapestry of Uzès</b></h3>
+<p><span style="font-weight: 300;">Uzès dazzles with its architectural splendor, where stone facades and hidden courtyards tell stories of the past. The town&#8217;s heart, the Place aux Herbes, epitomizes the beauty of Uzès with its arcaded buildings and bustling market. This square, alive with locals and tourists alike, hosts a weekly market that transforms it into a kaleidoscope of colors, scents, and flavors, offering a taste of the region&#8217;s rich culinary heritage.</span></p>
+<p><span style="font-weight: 300;">The Duché d’Uzès, a towering presence in the town, serves as a symbol of its noble past. This castle, still owned by the Duke of Uzès, offers a fascinating glimpse into the life of French nobility. Visitors can tour the ducal palace, exploring its lavishly decorated rooms, ancient towers, and the panoramic views of the Uzès rooftops and the surrounding countryside from the top of the Bermonde Tower.</span></p>
+<figure id="attachment_232" aria-describedby="caption-attachment-232" style="width: 1500px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-232" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201500%201000'%3E%3C/svg%3E" alt="Uzès" width="1500" height="1000" data-lazy-srcset="/wp-content/uploads/2024/03/image-85-2919830.webp 1500w, /wp-content/uploads/2024/03/image-85-2919830-300x200.webp 300w, /wp-content/uploads/2024/03/image-85-2919830-1024x683.webp 1024w, /wp-content/uploads/2024/03/image-85-2919830-768x512.webp 768w, /wp-content/uploads/2024/03/image-85-2919830-90x60.webp 90w, /wp-content/uploads/2024/03/image-85-2919830-370x247.webp 370w, /wp-content/uploads/2024/03/image-85-2919830-776x517.webp 776w" data-lazy-sizes="(max-width: 1500px) 100vw, 1500px" data-lazy-src="/wp-content/uploads/2024/03/image-85-2919830.webp" /><noscript><img decoding="async" class="size-full wp-image-232" src="/wp-content/uploads/2024/03/image-85-2919830.webp" alt="Uzès" width="1500" height="1000" srcset="/wp-content/uploads/2024/03/image-85-2919830.webp 1500w, /wp-content/uploads/2024/03/image-85-2919830-300x200.webp 300w, /wp-content/uploads/2024/03/image-85-2919830-1024x683.webp 1024w, /wp-content/uploads/2024/03/image-85-2919830-768x512.webp 768w, /wp-content/uploads/2024/03/image-85-2919830-90x60.webp 90w, /wp-content/uploads/2024/03/image-85-2919830-370x247.webp 370w, /wp-content/uploads/2024/03/image-85-2919830-776x517.webp 776w" sizes="(max-width: 1500px) 100vw, 1500px" /></noscript><figcaption id="caption-attachment-232" class="wp-caption-text">Uzès &#8211; Source: Opus Developpment</figcaption></figure>
+<h3><b>Walking Through History: The Streets of Uzès</b></h3>
+<p><span style="font-weight: 300;">A stroll through Uzès is a walk through history. The town&#8217;s layout, with its narrow streets and shaded squares, has remained largely unchanged since the Middle Ages, offering an authentic glimpse into the past. Highlights include the medieval garden, an oasis of tranquility, and the Saint-Théodorit cathedral with its striking Fenestrelle Tower, a unique circular Romanesque bell tower that is the only one of its kind in France.</span></p>
+<p><span style="font-weight: 300;">The preservation of Uzès&#8217; historical heritage is evident in every corner of the town. From the carefully restored buildings to the respectful integration of modern life within its ancient walls, Uzès stands as a testament to the value of preserving history while embracing the present.</span></p>
+<h3><b>Cultural and Culinary Experiences</b></h3>
+<p><span style="font-weight: 300;">Uzès is not only about architecture and history; it&#8217;s a vibrant town with a rich cultural life. Art galleries, boutiques, and craft shops offer a wide range of local and artisan products, from traditional Provencal fabrics to contemporary art. The town&#8217;s culinary scene is equally impressive, with restaurants and cafes serving dishes that highlight the flavors of the region, accompanied by the renowned wines of the Duchy.</span></p>
+<h2><b>Saint-Rémy-de-Provence</b></h2>
+<p><span style="font-weight: 300;"><a href="https://allthingsfrench.com/st-remy-de-provence/">Saint-Rémy-de-Provence</a>, nestled in the heart of Provence, is a picturesque town that offers a unique blend of natural beauty, historical depth, and artistic legacy. It is famously known as the place where Vincent Van Gogh found profound inspiration, resulting in some of the most vibrant and influential works of his career. Additionally, the town is home to the ancient Roman ruins of Glanum, adding a layer of historical intrigue to its charm.</span></p>
+<h3><b>Vincent Van Gogh&#8217;s Legacy</b></h3>
+<p><span style="font-weight: 300;">In 1889, Vincent Van Gogh admitted himself to the Saint-Paul-de-Mausole asylum in Saint-Rémy-de-Provence, seeking solace and treatment for his mental health struggles. The surrounding landscapes and the asylum&#8217;s gardens became the subjects of many of his paintings during this period. The vivid colors and dynamic brushstrokes of works such as &#8220;Starry Night Over the Rhone&#8221; and &#8220;Wheat Field with Cypresses&#8221; reflect the profound impact of the Provençal landscape on Van Gogh&#8217;s art.</span></p>
+<p><span style="font-weight: 300;">Today, visitors can follow in Van Gogh&#8217;s footsteps through the town and its surroundings, exploring locations that inspired his paintings. The Van Gogh trail, marked by informative panels, guides art enthusiasts through these significant sites, allowing them to see the real-life landscapes behind some of his most famous works.</span></p>
+<figure id="attachment_233" aria-describedby="caption-attachment-233" style="width: 1000px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-233" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201000%20743'%3E%3C/svg%3E" alt="Saint-Rémy-de-Provence" width="1000" height="743" data-lazy-srcset="/wp-content/uploads/2024/03/image-86-2383545.webp 1000w, /wp-content/uploads/2024/03/image-86-2383545-300x223.webp 300w, /wp-content/uploads/2024/03/image-86-2383545-768x571.webp 768w, /wp-content/uploads/2024/03/image-86-2383545-81x60.webp 81w, /wp-content/uploads/2024/03/image-86-2383545-110x83.webp 110w" data-lazy-sizes="(max-width: 1000px) 100vw, 1000px" data-lazy-src="/wp-content/uploads/2024/03/image-86-2383545.webp" /><noscript><img decoding="async" class="size-full wp-image-233" src="/wp-content/uploads/2024/03/image-86-2383545.webp" alt="Saint-Rémy-de-Provence" width="1000" height="743" srcset="/wp-content/uploads/2024/03/image-86-2383545.webp 1000w, /wp-content/uploads/2024/03/image-86-2383545-300x223.webp 300w, /wp-content/uploads/2024/03/image-86-2383545-768x571.webp 768w, /wp-content/uploads/2024/03/image-86-2383545-81x60.webp 81w, /wp-content/uploads/2024/03/image-86-2383545-110x83.webp 110w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript><figcaption id="caption-attachment-233" class="wp-caption-text">Saint-Rémy-de-Provence &#8211; Source: France Travel Info</figcaption></figure>
+<h3><b>The Ruins of Glanum</b></h3>
+<p><span style="font-weight: 300;">Just outside Saint-Rémy-de-Provence lie the ruins of Glanum, an ancient Roman city that offers a glimpse into the region&#8217;s long history. Founded in the 6th century BCE and developed significantly under Roman rule, Glanum boasts impressive remnants, including a well-preserved triumphal arch and a mausoleum, known as Les Antiques. These ruins are a testament to the architectural prowess and societal structures of the ancient world.</span></p>
+<p><span style="font-weight: 300;">Glanum&#8217;s strategic location, at the foot of the Alpilles mountains, provided it with natural defenses and a source of water, contributing to its prosperity over centuries. The site&#8217;s excavation has revealed insights into the daily lives of its inhabitants, including their homes, public buildings, and religious practices.</span></p>
+<h3><b>A Town Steeped in Culture and History</b></h3>
+<p><span style="font-weight: 300;">Saint-Rémy-de-Provence is more than its connections to Van Gogh and ancient Rome; it is a vibrant town with a rich cultural life. Its narrow streets, shaded squares, and historic buildings create an atmosphere that is both inviting and inspiring. The town&#8217;s weekly market is a celebration of Provençal cuisine and craftsmanship, offering everything from fresh produce to handmade goods.</span></p>
+<p><span style="font-weight: 300;">Cafes and restaurants abound, providing the perfect setting to enjoy the local cuisine, which is rich with the flavors of olive oil, herbs, and fresh vegetables. Art galleries, boutiques, and museums contribute to the town&#8217;s artistic ambiance, making it a hub for creatives and culture enthusiasts alike.</span></p>
+<h2><b>Le Barroux</b></h2>
+<p><span style="font-weight: 300;">Located atop a hill in the Vaucluse department of Provence, Le Barroux is a captivating village that seems to have been lifted straight from a medieval tale. Dominated by its imposing castle, Château du Barroux, the village offers a unique glimpse into the history and architectural grandeur of the Middle Ages, surrounded by picturesque landscapes that embody the serene beauty of Provence.</span></p>
+<h3><b>Château du Barroux: A Monument to History</b></h3>
+<p><span style="font-weight: 300;">The Château du Barroux, standing vigil over the village and the surrounding countryside, is a testament to the strategic importance and the turbulent history of the region. Dating back to the 12th century, the castle has witnessed numerous conflicts, renovations, and restorations throughout its existence. Its current form, with massive walls and fortified towers, speaks to the medieval architectural ingenuity designed to withstand sieges and the passage of time.</span></p>
+<p><span style="font-weight: 300;">Visitors to the Château du Barroux are treated to a journey through history, with the opportunity to explore the castle&#8217;s interior, including its grand halls, courtyards, and ramparts. The views from the castle are breathtaking, offering panoramic vistas of the Mont Ventoux, the Dentelles de Montmirail, and the patchwork of vineyards and olive groves that define the landscape of Provence.</span></p>
+<figure id="attachment_234" aria-describedby="caption-attachment-234" style="width: 1920px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-234" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201080'%3E%3C/svg%3E" alt="Le Barroux" width="1920" height="1080" data-lazy-srcset="/wp-content/uploads/2024/03/image-87-4759654.webp 1920w, /wp-content/uploads/2024/03/image-87-4759654-300x169.webp 300w, /wp-content/uploads/2024/03/image-87-4759654-1024x576.webp 1024w, /wp-content/uploads/2024/03/image-87-4759654-768x432.webp 768w, /wp-content/uploads/2024/03/image-87-4759654-1536x864.webp 1536w, /wp-content/uploads/2024/03/image-87-4759654-107x60.webp 107w" data-lazy-sizes="(max-width: 1920px) 100vw, 1920px" data-lazy-src="/wp-content/uploads/2024/03/image-87-4759654.webp" /><noscript><img decoding="async" class="size-full wp-image-234" src="/wp-content/uploads/2024/03/image-87-4759654.webp" alt="Le Barroux" width="1920" height="1080" srcset="/wp-content/uploads/2024/03/image-87-4759654.webp 1920w, /wp-content/uploads/2024/03/image-87-4759654-300x169.webp 300w, /wp-content/uploads/2024/03/image-87-4759654-1024x576.webp 1024w, /wp-content/uploads/2024/03/image-87-4759654-768x432.webp 768w, /wp-content/uploads/2024/03/image-87-4759654-1536x864.webp 1536w, /wp-content/uploads/2024/03/image-87-4759654-107x60.webp 107w" sizes="(max-width: 1920px) 100vw, 1920px" /></noscript><figcaption id="caption-attachment-234" class="wp-caption-text">Le Barroux &#8211; Source: Provence Holidays</figcaption></figure>
+<h3><b>The Village of Le Barroux: A Step Back in Time</b></h3>
+<p><span style="font-weight: 300;"><a href="https://www.provenceweb.fr/e/vaucluse/barroux/barroux.htm">Walking through Le Barroux</a> is akin to stepping back in time. The village streets, lined with stone houses adorned with flowers and ancient doorways, lead visitors on a meandering path through history. The village&#8217;s old church, with its quiet charm, adds to the sense of timelessness that pervades Le Barroux.</span></p>
+<p><span style="font-weight: 300;">Despite its historical ambiance, Le Barroux is also a vibrant community where traditional Provencal life continues unabated. Artisans&#8217; workshops, small boutiques, and cozy cafes offer a warm welcome to visitors, inviting them to linger and enjoy the slower pace of life that characterizes the village.</span></p>
+<h3><b>The Natural Splendor of Provence</b></h3>
+<p><span style="font-weight: 300;">The beauty of Le Barroux extends beyond its medieval architecture into the natural splendor of Provence. The village is an ideal starting point for exploring the surrounding countryside, with its abundant vineyards, olive groves, and the scenic beauty of the Provencal landscape. Hiking trails lead adventurers through the lush forests of the lower slopes of Mont Ventoux and into the heart of the Dentelles de Montmirail, offering both challenge and reward in the form of stunning natural vistas.</span></p>
+<h2><b>Nîmes</b></h2>
+<p><span style="font-weight: 300;">Nîmes, often referred to as the Rome of France, is a city where ancient history and modern life blend seamlessly together, creating an atmosphere that is both vibrant and steeped in history. The city&#8217;s well-preserved Roman architecture, notably the amphitheater and the Maison Carrée, stands as a testament to its glorious past and draws visitors from around the globe.</span></p>
+<h3><b>The Amphitheater of Nîmes</b></h3>
+<p><span style="font-weight: 300;">The Nîmes Amphitheater, or the Arena of Nîmes, is one of the best-preserved Roman amphitheaters in the world. Built around the end of the 1st century AD, it could accommodate over 20,000 spectators who gathered to watch gladiatorial contests and other public spectacles. Today, this impressive structure continues to serve as a venue for various events, including concerts, bullfights, and historical reenactments, allowing visitors to experience the grandeur of Roman architecture in a lively, contemporary setting.</span></p>
+<p><span style="font-weight: 300;">Walking through the elliptical corridors of the amphitheater, one can&#8217;t help but marvel at the engineering prowess of the Romans. The double-tiered arches, the vast arena, and the intricate underground passages (once used to house animals and gladiators before their contests) offer a glimpse into the complexity and scale of entertainment in the ancient world.</span></p>
+<figure id="attachment_235" aria-describedby="caption-attachment-235" style="width: 750px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-235" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20446'%3E%3C/svg%3E" alt="The Amphitheater of Nîmes" width="750" height="446" data-lazy-srcset="/wp-content/uploads/2024/03/image-88-2645767.webp 750w, /wp-content/uploads/2024/03/image-88-2645767-300x178.webp 300w, /wp-content/uploads/2024/03/image-88-2645767-101x60.webp 101w" data-lazy-sizes="(max-width: 750px) 100vw, 750px" data-lazy-src="/wp-content/uploads/2024/03/image-88-2645767.webp" /><noscript><img decoding="async" class="size-full wp-image-235" src="/wp-content/uploads/2024/03/image-88-2645767.webp" alt="The Amphitheater of Nîmes" width="750" height="446" srcset="/wp-content/uploads/2024/03/image-88-2645767.webp 750w, /wp-content/uploads/2024/03/image-88-2645767-300x178.webp 300w, /wp-content/uploads/2024/03/image-88-2645767-101x60.webp 101w" sizes="(max-width: 750px) 100vw, 750px" /></noscript><figcaption id="caption-attachment-235" class="wp-caption-text">The Amphitheater of Nîmes &#8211; History Hit</figcaption></figure>
+<h3><b>Maison Carrée: A Monument of Eternal Beauty</b></h3>
+<p><span style="font-weight: 300;">The Maison Carrée is another jewel in Nîmes&#8217; Roman crown. This ancient temple, dedicated to the grandsons of Emperor Augustus in the 1st century BC, is one of the best-preserved Roman temples to have survived through the ages. Its classical architecture, characterized by Corinthian columns and a pristine façade, exemplifies the elegance and symmetry of Roman design.</span></p>
+<p><span style="font-weight: 300;">The Maison Carrée has inspired architectural styles throughout history, including the neoclassical movement in Europe and America. It remains a focal point in Nîmes, drawing visitors into its serene precincts, now housing a fascinating film that recounts the city&#8217;s rich history.</span></p>
+<h3><b>Exploring the Rich Tapestry of Nîmes</b></h3>
+<p><span style="font-weight: 300;">Beyond these monumental structures, Nîmes is a treasure trove of historical sites waiting to be explored. The city&#8217;s ancient walls, medieval buildings, and winding streets tell stories of centuries past. The Jardins de la Fontaine, one of Europe&#8217;s earliest public parks, offers a beautiful setting for leisurely walks amidst statues and ruins from the Roman era, including the Temple of Diana and the Tour Magne, a Roman tower that provides panoramic views of the city and its surroundings.</span></p>
+<h2><b>Conclusion</b></h2>
+<p><span style="font-weight: 300;">Exploring the charm and history of Day Trips from Avignon and its surrounding areas offers a deep dive into the rich tapestry of French culture, history, and natural beauty. Each destination, from the artistic havens of Arles and Saint-Rémy-de-Provence to the ancient majesty of Nîmes and the serene landscapes of Le Barroux and Fontaine de Vaucluse, tells a unique story of Provence’s past and present.</span></p>
+<p><span style="font-weight: 300;">The journey from the medieval allure of Uzès, with its ducal palace and Renaissance architecture, to the vibrant markets and galleries of Aix-en-Provence, exemplifies the diversity and cultural richness of the region. Meanwhile, the timeless beauty of L’Isle-sur-la-Sorgue’s waterways and antique markets offers a tranquil retreat into a world where history and modernity coalesce.</span></p>
+<figure id="attachment_236" aria-describedby="caption-attachment-236" style="width: 1500px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-236" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201500%201000'%3E%3C/svg%3E" alt="Day trips from Avignon" width="1500" height="1000" data-lazy-srcset="/wp-content/uploads/2024/03/image-89-5516812.webp 1500w, /wp-content/uploads/2024/03/image-89-5516812-300x200.webp 300w, /wp-content/uploads/2024/03/image-89-5516812-1024x683.webp 1024w, /wp-content/uploads/2024/03/image-89-5516812-768x512.webp 768w, /wp-content/uploads/2024/03/image-89-5516812-90x60.webp 90w, /wp-content/uploads/2024/03/image-89-5516812-370x247.webp 370w, /wp-content/uploads/2024/03/image-89-5516812-776x517.webp 776w" data-lazy-sizes="(max-width: 1500px) 100vw, 1500px" data-lazy-src="/wp-content/uploads/2024/03/image-89-5516812.webp" /><noscript><img decoding="async" class="size-full wp-image-236" src="/wp-content/uploads/2024/03/image-89-5516812.webp" alt="Day trips from Avignon" width="1500" height="1000" srcset="/wp-content/uploads/2024/03/image-89-5516812.webp 1500w, /wp-content/uploads/2024/03/image-89-5516812-300x200.webp 300w, /wp-content/uploads/2024/03/image-89-5516812-1024x683.webp 1024w, /wp-content/uploads/2024/03/image-89-5516812-768x512.webp 768w, /wp-content/uploads/2024/03/image-89-5516812-90x60.webp 90w, /wp-content/uploads/2024/03/image-89-5516812-370x247.webp 370w, /wp-content/uploads/2024/03/image-89-5516812-776x517.webp 776w" sizes="(max-width: 1500px) 100vw, 1500px" /></noscript><figcaption id="caption-attachment-236" class="wp-caption-text">Day trips from Avignon</figcaption></figure>
+<p><span style="font-weight: 300;">Each location, whether it be the Roman ruins that stand as silent witnesses to the passage of time or the places where Van Gogh found his inspiration among the Provençal landscape, invites exploration and contemplation. They are not just destinations but portals to understanding the depth of human creativity, resilience, and the enduring beauty of nature.</span></p>
+<p><span style="font-weight: 300;">This exploration of <a href="https://www.britannica.com/place/Avignon">Day Trips from Avignon</a> and its environs underscores the importance of preserving our cultural and natural heritage. It highlights how history, art, and the environment shape our collective identity and continue to inspire and enlighten future generations.</span></p>
+<p><span style="font-weight: 300;">In conclusion, a journey through these historic and picturesque regions of Provence is not merely a trip through geographical locations; it is an immersive experience into the heart and soul of Southern France. Each town and landmark tells part of the greater story of human civilization, the evolution of art, and the timeless beauty of the natural world, making this region a mosaic of human experience waiting to be discovered and cherished.</span></p>
+	</div><!-- .entry-content -->
+        	<footer class="entry-footer">
+    		    	</footer><!-- .entry-footer -->
+    </article><!-- #post-214 -->
+        </main><!-- #main -->        
+
+                    
+            <nav class="post-navigation pagination" role="navigation">
+                <h2 class="screen-reader-text">Post Navigation</h2>
+                <div class="nav-links">
+                                        <div class="nav-previous">
+                        <a href="/11-best-day-trips-from-orlando/" rel="prev">
+                            <span class="meta-nav"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><defs><style>.arla{fill:#999596;}</style></defs><path class="arla" d="M16.01,11H8v2h8.01v3L22,12,16.01,8Z" transform="translate(22 16) rotate(180)"/></svg>Previous Post</span>
+                            <span class="post-title">11 Best Day Trips from Orlando</span>
+                        </a>
+                        <figure class="post-img">
+                            <img width="370" height="247" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20370%20247'%3E%3C/svg%3E" alt="Top Day Trips From Avignon: Unforgettable Escapes" data-lazy-src="/wp-content/uploads/2024/03/DALL·E-2024-03-25-14.02.20-A-panoramic-view-of-Orlando-Florida-showcasing-its-vibrant-city-life-and-scenic-beauty.-This-wide-image-should-capture-the-essence-of-Orlando-featu-1-8018723-370x247.webp"><noscript><img width="370" height="247" src="/wp-content/uploads/2024/03/DALL·E-2024-03-25-14.02.20-A-panoramic-view-of-Orlando-Florida-showcasing-its-vibrant-city-life-and-scenic-beauty.-This-wide-image-should-capture-the-essence-of-Orlando-featu-1-8018723-370x247.webp" alt="Top Day Trips From Avignon: Unforgettable Escapes"></noscript>                        </figure>
+                    </div>
+                                                            <div class="nav-next">
+                        <a href="/day-trips-from-seville/" rel="next">
+                            <span class="meta-nav">Next Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><defs><style>.arra{fill:#999596;}</style></defs><path class="arra" d="M16.01,11H8v2h8.01v3L22,12,16.01,8Z" transform="translate(-8 -8)"/></svg></span>
+                            <span class="post-title">Epic Day Trips From Seville, Spain</span>
+                        </a>
+                        <figure class="post-img">
+                            <img width="370" height="247" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20370%20247'%3E%3C/svg%3E" alt="Top Day Trips From Avignon: Unforgettable Escapes" data-lazy-src="/wp-content/uploads/2024/03/DALL·E-2024-03-29-14.05.04-Create-a-daytime-close-up-image-of-Seville-focusing-on-the-architectural-details-and-vibrant-street-life.-Capture-the-essence-of-the-citys-historic-1-5935847-370x247.webp"><noscript><img width="370" height="247" src="/wp-content/uploads/2024/03/DALL·E-2024-03-29-14.05.04-Create-a-daytime-close-up-image-of-Seville-focusing-on-the-architectural-details-and-vibrant-street-life.-Capture-the-essence-of-the-citys-historic-1-5935847-370x247.webp" alt="Top Day Trips From Avignon: Unforgettable Escapes"></noscript>                        </figure>
+                    </div>
+                                    </div>
+            </nav>        
+                
+        <div class="additional-post related-posts">
+    		<h3 class="post-title"><span>Recommended Articles</span></h3>            <div class="article-wrap">
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/best-day-trips-from-washington-dc/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Best Day Trips from Washington DC" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Best Day Trips from Washington DC" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-03-17.28.58-A-close-up-daytime-image-of-Washington-DC-focusing-on-the-Capitol-building.-The-image-is-wide-capturing-the-majestic-architecture-of-the-Capitol-wi-1-1141634-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/best-day-trips-from-washington-dc/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-04T11:43:41+03:00" itemprop="dateModified">04.04.2024</time></time><time class="updated" datetime="2024-04-09T19:24:12+03:00" itemprop="datePublished">09.04.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/best-day-trips-from-washington-dc/" rel="bookmark">Best Day Trips from Washington DC</a></h3>                        
+        				</header>
+        			</article>
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/best-day-trips-from-genoa-italy/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day Trips From Genoa" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day Trips From Genoa" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-02-20.38.01-A-daytime-close-up-image-of-Genoa-Italy-capturing-the-essence-of-the-city-in-bright-natural-light.-The-image-focuses-on-architectural-details-and-t-1-7629941-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/best-day-trips-from-genoa-italy/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-04T13:45:47+03:00" itemprop="dateModified">04.04.2024</time></time><time class="updated" datetime="2024-02-21T22:34:27+03:00" itemprop="datePublished">21.02.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/best-day-trips-from-genoa-italy/" rel="bookmark">Best Day Trips from Genoa, Italy</a></h3>                        
+        				</header>
+        			</article>
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/best-things-to-do-in-yellow-springs-ohio/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="things to do in yellow springs ohio" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="things to do in yellow springs ohio" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-23-03.18.42-Aerial-view-of-Yellow-Springs-Ohio-during-daytime-in-a-wide-format.-The-image-should-showcase-the-small-towns-unique-charm-with-quaint-streets-line-1-8267118-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/best-things-to-do-in-yellow-springs-ohio/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-23T05:20:11+03:00" itemprop="dateModified">23.04.2024</time></time><time class="updated" datetime="2024-04-22T04:49:04+03:00" itemprop="datePublished">22.04.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/best-things-to-do-in-yellow-springs-ohio/" rel="bookmark">Best Things to do in Yellow Springs, Ohio</a></h3>                        
+        				</header>
+        			</article>
+    			            </div>    		
+    	</div>
+        
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"><span>Leave A Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/day-trips-from-avignon/" style="display:none;">Cancel reply</a></small></span></h3><form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label class="screen-reader-text">Comment</label><textarea id="comment" name="comment" placeholder="Comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><label class="screen-reader-text">Full Name</label><input id="author" name="author" placeholder="Name*" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label class="screen-reader-text">Email</label><input id="email" name="email" placeholder="Email*" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label class="screen-reader-text">Website</label><input id="url" name="url" placeholder="Website" type="text" value="" size="30" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='214' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!--  -->
+	
+</div><!-- #comments -->
+    </div><!-- #primary -->
+
+<aside id="secondary" class="widget-area" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+	<section id="calendar-2" class="widget widget_calendar"><h2 class="widget-title" itemprop="name">Check Out More Events By Date!</h2><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>September 2026</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td id="today">4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="/2024/04/">&laquo; Apr</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></section><section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="/"><label><span class="screen-reader-text">Search for:</span><input type="search" class="search-field" placeholder="Search..." value="" name="s" /></label><input type="submit" id="submit-field" class="search-submit" value="Search" /></form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title" itemprop="name">Recent Posts</h2>
+		<ul>
+											<li>
+					<a href="/incredible-day-trips-from-adelaide/">Incredible Day Trips from Adelaide</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-palo-alto/">Best Day Trips from Palo Alto</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-oahu-to-other-islands/">Best Day Trips from Oahu To Other Islands</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-rotterdam/">Best Day trips from Rotterdam</a>
+									</li>
+											<li>
+					<a href="/best-things-to-do-in-bradley-beach-nj/">Best Things To Do in Bradley beach, NJ</a>
+									</li>
+					</ul>
+
+		</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title" itemprop="name">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-2"><a href="/art.html">Art</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/contest.html">Contest</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="/date-night.html">Date Night</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="/exercise.html">Exercise</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8.html">Family Fun</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="/category/travel/">Travel</a>
+</li>
+			</ul>
+
+			</section></aside><!-- #secondary -->
+            
+        </div><!-- .container -->        
+    </div><!-- .error-holder/site-content -->
+        <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="footer-b">
+		<div class="container">
+			<div class="copyright">           
+            <div class="copyright-wrap">© 2012 365-thingstodo.com. All Rights Reserved. All the best things to do in Kitchener-Waterloo!</div> Blossom Spa | Developed By <a href="https://blossomthemes.com/" rel="nofollow" target="_blank"> Blossom Themes</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>. <a class="privacy-policy-link" href="/privacy-policy/" rel="privacy-policy">Privacy Policy</a>               
+            </div>
+                        <button aria-label="go to top" class="back-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+		</div>
+	</div>
+        </footer><!-- #colophon -->
+        </div><!-- #page -->
+    <div class='code-block code-block-1' style='margin: 8px 0; clear: both;'>
+<script type="rocketlazyloadscript" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899819773027559"
+     crossorigin="anonymous"></script></div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/login0yc0wq1xt9sf4uxpuw7b\/|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/365-kw.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/all.min.js" id="all-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/v4-shims.min.js" id="v4-shims-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/owl.carousel.min.js" id="owl-carousel-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/owlcarousel2-a11ylayer.min.js" id="owlcarousel2-a11ylayer-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/perfect-scrollbar.min.js" id="perfect-scrollbar-js" defer></script>
+<script type="text/javascript" id="blossom-spa-js-extra">
+/* <![CDATA[ */
+var blossom_spa_data = {"rtl":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/custom.min.js" id="blossom-spa-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/modal-accessibility.min.js" id="blossom-spa-modal-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+<script type="rocketlazyloadscript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" media="all" data-minify="1" /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1788503241 -->

@@ -1,0 +1,777 @@
+    <!DOCTYPE html>
+    <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+    <head itemscope itemtype="http://schema.org/WebSite"><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>Top Day Trips from Burlington, Vermont - 365-kw.com</title><style id="rocket-critical-css">:root{--primary-color:#9cbe9c;--primary-color-rgb:156, 190, 156;--primary-font:'Nunito Sans', sans-serif;--secondary-font:'Marcellus', sans-serif}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:0.67em 0}a{background-color:transparent}b,strong{font-weight:bolder}img{border-style:none}button,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,button,input{color:#585656;font-family:var(--primary-font);font-size:18px;line-height:1.8;font-weight:400}h1{clear:both;font-weight:700;margin:1em 0 0.6666em 0;line-height:1.3}h1{font-size:2.7223em}p{margin-bottom:1.5em}i{font-style:italic}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{background:#fff}ul{margin:0 0 1.5em 3em}ul{list-style:disc}img{height:auto;max-width:100%;vertical-align:top}button{display:inline-block;background:var(--primary-color);border:1px solid var(--primary-color);color:#fff;font-weight:700;font-size:0.6666em;border-radius:40px;padding:12px 25px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 0 10px rgba(0,0,0,0.2)}a{color:var(--primary-color);text-decoration:none}a:visited{color:inherit}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important}.container:before,.container:after,.site-content:before,.site-content:after{content:"";display:table;table-layout:fixed}.container:after,.site-content:after{clear:both}.updated:not(.published){display:none}.custom-logo-link{display:inline-block}.skip-link,.skip-link:visited{position:absolute;top:-999px;left:20px;background:#f7f7f7;border:1px solid rgba(0,0,0,0.1);font-size:0.8888em;font-weight:600;padding:10px 20px;color:#000;text-decoration:none;border-radius:5px;box-shadow:0 2px 20px rgba(0,0,0,0.1);z-index:999;text-decoration:none}.container{max-width:1170px;margin:0 auto}.responsive-nav{display:none}header.page-header{background-repeat:no-repeat;background-size:cover;position:relative;padding-top:90px;padding-bottom:60px;margin-bottom:80px;z-index:1;text-align:center}header.page-header::after{content:"";background:rgba(0,0,0,0.5);position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.page-header .page-title{color:#fff;font-size:2.6665em;font-family:var(--secondary-font);font-weight:400;margin-top:0;margin-bottom:20px}.comment-respond .comment-reply-title a{display:inline-block;font-size:0.7778em;margin-left:10px;color:#212127;vertical-align:middle;text-transform:uppercase;font-weight:700;letter-spacing:1px}.comment-respond .comment-form p{margin-top:0;margin-bottom:20px}.comment-form p.comment-notes{display:none}.comment-respond .comment-form p:not(.comment-form-cookies-consent) label{display:none}.back-to-top{padding:0;font-size:1em;position:fixed;bottom:20px;right:0;width:50px;height:50px;line-height:44px;background:#fff;text-align:center;border-radius:100%;opacity:0;visibility:hidden;z-index:999;border:3px solid rgba(var(--primary-color-rgb),0.5);box-shadow:0 2px 10px rgba(0,0,0,0.1);color:#000000}.header-main{display:flex;flex:1;flex-flow:row wrap;align-items:center;justify-content:flex-end;padding:33px 0}.header-main .site-branding{display:flex;flex:auto;flex-direction:column;align-items:flex-start}.site-branding .site-title{font-family:var(--secondary-font);font-weight:400;font-size:1.6667em;margin:0}.site-branding .site-title a{text-decoration:none}.site-branding .site-description{margin:0;font-size:0.8888em}header.site-header>.container{position:relative;padding-bottom:34px}.nav-wrap{background:var(--primary-color);border-radius:5px;padding:10px;display:flex;flex:1;flex-flow:row wrap;justify-content:flex-end;position:absolute;top:calc(100% - 34px);left:0;right:0;z-index:999}.nav-wrap .main-navigation{display:flex;flex:auto;align-items:center}.main-navigation button.toggle-btn{display:none}.nav-wrap ul{margin:0;padding:0;list-style:none}.main-navigation ul li{display:inline-block;vertical-align:middle;font-size:0.778em;text-transform:uppercase;font-weight:600;position:relative;margin-right:20px;margin-left:20px}.main-navigation ul li a{color:#fff;display:inline-block;border-bottom:3px solid transparent;text-decoration:none}.main-navigation ul li a:after{content:"";background:rgba(255,255,255,0.5);width:0%;height:3px;position:absolute;top:100%;left:0;opacity:0;visibility:hidden}.close{display:inline-block;width:15px;height:15px;position:relative;background:none;border:none;border-radius:0;box-shadow:none;padding:0;overflow:hidden}.close:before,.close:after{content:"";background:#fff;width:100%;height:2px;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}.close:after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}span.category a{display:inline-block;padding:3px 10px;background:#262525;border-radius:3px;color:#fff;margin-right:2px;margin-bottom:5px;text-decoration:none}.single header.page-header{min-height:600px;display:flex;flex:1;justify-content:center;align-items:flex-end}.single header.page-header .container{max-width:770px}.single header.page-header .category{font-size:0.6666em;text-transform:uppercase;font-weight:700;letter-spacing:1px}.single .page-header .page-title{margin-bottom:0}@media screen and (max-width:1370px){.back-to-top{bottom:80px}}@media screen and (max-width:1199px){.container{max-width:1000px;padding-left:15px;padding-right:15px}.main-navigation ul li{margin-left:15px;margin-right:15px}.site-branding .site-title{font-size:1.2223em}}@media screen and (min-width:1025px){.main-navigation .close{display:none}}@media screen and (max-width:1024px){.container{max-width:768px}.single header.page-header{min-height:350px}.header-main .site-branding{justify-content:center;text-align:center}.site-branding .site-title{font-size:1.6667em}.site-header .nav-wrap ul{display:none}.nav-wrap{padding:5px 10px;left:15px;right:15px}.main-navigation button.toggle-btn{display:inline-block;vertical-align:middle;position:relative;padding:0 20px 0 50px;box-shadow:none;background:transparent;font-size:0.7778em;height:45px;border-radius:0}.nav-wrap .main-navigation button.toggle-btn::after{text-transform:uppercase}.main-navigation button.toggle-btn .toggle-bar{background:#fff;width:20px;height:2px;position:absolute;top:0;left:20px;bottom:0;margin:auto}.nav-wrap .main-navigation button.toggle-btn .toggle-bar:first-child{top:-10px}.nav-wrap .main-navigation button.toggle-btn .toggle-bar:last-child{bottom:-10px}.responsive-nav .close{color:inherit;margin-top:25px;margin-bottom:40px;margin-right:20px;width:25px;height:25px}.responsive-nav{position:fixed;display:block;width:320px;height:100%;top:0;left:0;background:var(--primary-color);z-index:999999;overflow:auto;display:none}.responsive-nav .main-navigation{text-align:right;width:320px}.responsive-nav .main-navigation ul{margin:0;padding:0;list-style:none;text-align:left}.responsive-nav .main-navigation ul li{display:block;margin:0;padding-right:0;font-weight:600;letter-spacing:1px}.responsive-nav .main-navigation ul li a{padding:15px 20px;border-bottom:1px solid rgba(255,255,255,0.15);width:100%}.responsive-nav .main-navigation ul li a::after{display:none}}@media screen and (max-width:767px){.container{max-width:420px}.single header.page-header{min-height:auto}.page-header .page-title{font-size:2em}.single header.page-header .container{max-width:420px}}</style><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans%3A200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMarcellus%3Aregular&display=swap" /></noscript><link rel="preload" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  media="all" data-minify="1" />
+
+		<!-- All in One SEO 4.9.4.1 - aioseo.com -->
+	<meta name="description" content="Discover scenic beauty and outdoor adventures with Day Trips from Burlington, Vermont. Explore charming towns, mountain landscapes, and local attractions." />
+	<meta name="robots" content="max-image-preview:large" />
+	<meta name="author" content="admin"/>
+	<link rel="canonical" href="/day-trips-from-burlington-vermont/" />
+	<meta name="generator" content="All in One SEO (AIOSEO) 4.9.4.1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="365-kw.com - All The Best Things to Do &amp; Trip Ideas" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Top Day Trips from Burlington, Vermont - 365-kw.com" />
+		<meta property="og:description" content="Discover scenic beauty and outdoor adventures with Day Trips from Burlington, Vermont. Explore charming towns, mountain landscapes, and local attractions." />
+		<meta property="og:url" content="/day-trips-from-burlington-vermont/" />
+		<meta property="og:image" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<meta property="og:image:secure_url" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<meta property="og:image:width" content="250" />
+		<meta property="og:image:height" content="250" />
+		<meta property="article:published_time" content="2024-03-12T05:06:48+00:00" />
+		<meta property="article:modified_time" content="2024-03-31T09:11:44+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Top Day Trips from Burlington, Vermont - 365-kw.com" />
+		<meta name="twitter:description" content="Discover scenic beauty and outdoor adventures with Day Trips from Burlington, Vermont. Explore charming towns, mountain landscapes, and local attractions." />
+		<meta name="twitter:image" content="/wp-content/uploads/2020/11/logotest_250.jpg" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#blogposting","name":"Top Day Trips from Burlington, Vermont - 365-kw.com","headline":"Day Trips From Burlington, Vermont","author":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"publisher":{"@id":"https:\/\/365-kw.com\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2024\/03\/DALL\u00b7E-2024-03-12-05.59.57-A-serene-panoramic-view-of-Burlington-Vermont-showcasing-its-picturesque-waterfront-on-Lake-Champlain-with-the-Adirondack-Mountains-in-the-backgrou-1-4260910.webp","width":1792,"height":1024,"caption":"Burlington, Vermont"},"datePublished":"2024-03-12T08:06:48+03:00","dateModified":"2024-03-31T12:11:44+03:00","inLanguage":"en-US","mainEntityOfPage":{"@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#webpage"},"isPartOf":{"@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#webpage"},"articleSection":"Travel"},{"@type":"BreadcrumbList","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/365-kw.com#listItem","position":1,"name":"Home","item":"https:\/\/365-kw.com","nextItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","name":"Travel"}},{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","position":2,"name":"Travel","item":"https:\/\/365-kw.com\/category\/travel\/","nextItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#listItem","name":"Day Trips From Burlington, Vermont"},"previousItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com#listItem","name":"Home"}},{"@type":"ListItem","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#listItem","position":3,"name":"Day Trips From Burlington, Vermont","previousItem":{"@type":"ListItem","@id":"https:\/\/365-kw.com\/category\/travel\/#listItem","name":"Travel"}}]},{"@type":"Organization","@id":"https:\/\/365-kw.com\/#organization","name":"365-kw.com","description":"All The Best Things to Do & Trip Ideas","url":"https:\/\/365-kw.com\/","logo":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2020\/11\/logotest_250.jpg","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#organizationLogo","width":250,"height":250},"image":{"@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#organizationLogo"}},{"@type":"Person","@id":"https:\/\/365-kw.com\/author\/admin\/#author","url":"https:\/\/365-kw.com\/author\/admin\/","name":"admin","image":{"@type":"ImageObject","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/21053879f058f77803446ad615232191?s=96&d=mm&r=g","width":96,"height":96,"caption":"admin"}},{"@type":"WebPage","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#webpage","url":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/","name":"Top Day Trips from Burlington, Vermont - 365-kw.com","description":"Discover scenic beauty and outdoor adventures with Day Trips from Burlington, Vermont. Explore charming towns, mountain landscapes, and local attractions.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/365-kw.com\/#website"},"breadcrumb":{"@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#breadcrumblist"},"author":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"creator":{"@id":"https:\/\/365-kw.com\/author\/admin\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/365-kw.com\/wp-content\/uploads\/2024\/03\/DALL\u00b7E-2024-03-12-05.59.57-A-serene-panoramic-view-of-Burlington-Vermont-showcasing-its-picturesque-waterfront-on-Lake-Champlain-with-the-Adirondack-Mountains-in-the-backgrou-1-4260910.webp","@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#mainImage","width":1792,"height":1024,"caption":"Burlington, Vermont"},"primaryImageOfPage":{"@id":"https:\/\/365-kw.com\/day-trips-from-burlington-vermont\/#mainImage"},"datePublished":"2024-03-12T08:06:48+03:00","dateModified":"2024-03-31T12:11:44+03:00"},{"@type":"WebSite","@id":"https:\/\/365-kw.com\/#website","url":"https:\/\/365-kw.com\/","name":"365-kw.com","description":"All The Best Things to Do & Trip Ideas","inLanguage":"en-US","publisher":{"@id":"https:\/\/365-kw.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+
+
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js" defer></script>
+<meta name="generator" content="WordPress 6.4.10" />
+<link rel='shortlink' href='/' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+
+
+<link rel="icon" href="/wp-content/uploads/2020/11/logotest_250-9194014-60x60.jpg" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" />
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2020/11/logotest_250-9194014.jpg" />
+<style type='text/css' media='all'>
+    :root {
+    --primary-font: Nunito Sans;
+    --secondary-font: Marcellus;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {        
+        font-size: 18px;
+    }
+
+    /*Typography*/
+
+    .site-branding .site-title{
+        font-size   : 30px;
+        font-family : Marcellus;
+        font-weight : 400;
+        font-style  : normal;
+    }
+
+    a.btn-readmore:hover:before, .btn-cta:hover:before, 
+    a.btn-readmore:hover:after, .btn-cta:hover:after {
+        background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="%239cbe9c" d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z" class=""></path></svg>');    
+    } 
+
+    .widget_bttk_testimonial_widget .bttk-testimonial-inner-holder:before, 
+    blockquote:before {
+        background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24"><path fill="%239cbe9c" d="M33.54,28.5a8,8,0,1,1-8.04,8,16,16,0,0,1,16-16A15.724,15.724,0,0,0,33.54,28.5Zm-12.04,8a8,8,0,0,1-16,0h0a16,16,0,0,1,16-16,15.724,15.724,0,0,0-7.96,8A7.989,7.989,0,0,1,21.5,36.5Z" transform="translate(-5.5 -20.5)"/></svg>');
+    };
+           
+    </style>		<style type="text/css" id="wp-custom-css">
+			.custom-logo-link {
+    margin: 0 auto;
+}
+
+.updated:not(.published) {
+	display: block;
+}
+
+.published {
+	display: none;
+}
+
+
+Conversation opened. 5 messages. All messages read.
+
+Skip to content
+Using Gmail with screen readers
+1 of 563
+re Using composequickly.com
+Inbox
+Neale Goldingay
+	
+	Apr 25, 2024, 3:49 AM (1 day ago)
+Hi Olivia Thanks for testing out Compose quickly. You may not know there is a beta feature that you can use to significantly increase the accuracy of the articl
+2
+Olivia Johns
+	
+	11:33 AM (1 hour ago)
+Hey Thanks for explaining Sounds good I`ve also experience issues with the view of Cons & Pros section, if I want to use article with Wordpress posting Looks li
+Neale Goldingay
+	
+Attachments12:06 PM (57 minutes ago)
+	
+to me
+I see what you mean, I designed it either to upload directly, which includes the css, or download the html file, and paste that into a html block, both include the css. 
+
+Your not the first to experience this I guess you are just copying the content across
+
+Add the css in the attached file to
+
+Admin > Appearance > Customize > Aditional CSS
+
+it wont change anything else on the site 
+
+Neale 
+ One attachment  •  Scanned by Gmail
+	
+Thanks, I'll check it out!
+Awesome, thanks!
+Thanks for the tip!
+
+.grid_container,
+.grid_row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 16px
+}
+
+.grid_container {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+.grid_content {
+	width: 100%;
+	grid-column: span 12;
+	padding-top: 25px;
+	padding-bottom: 25px
+}
+
+.faq_row,
+.funthings_row,
+.heading_row,
+.intro_row,
+.pros-n-cons_row {
+	width: 100%;
+	margin-bottom: 25px
+}
+
+.funthings_row {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+.grid_row,
+.mainImage {
+	max-width: 100%
+}
+
+.grid_row {
+	align-items: stretch;
+	grid-column: span 12;
+	margin-bottom: 25px
+}
+
+@media (max-width:479px) {
+	.griditem_6 {
+		grid-column: span 12
+	}
+
+	.faq_section {
+		margin-left: 1%;
+		margin-right: 1%
+	}
+
+	.getTable td,
+	.getTable th {
+		padding: 2px;
+		font-size: .8em
+	}
+}
+
+.consbullets li,
+.prosbullets li {
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 25px;
+	padding-left: 3em
+}
+
+@media (min-width:480px) {
+	.griditem_6 {
+		display: flex;
+		flex-direction: column;
+		grid-column: span 6
+	}
+
+	.faq_section {
+		margin-left: 10%;
+		margin-right: 10%
+	}
+}
+
+.consheader,
+.prosheader {
+	padding-left: 50px;
+	font-size: 32px
+}
+
+.griditem_6>div {
+	flex: 1
+}
+
+.prosheader {
+	color: #717B55
+}
+
+.consheader {
+	color: #ef3737
+}
+
+.consbullets,
+.prosbullets {
+	list-style-type: none;
+	padding-left: 0
+}
+
+.prosbullets li {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDU1LjQzMSA0NTUuNDMxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00MDUuNDkzIDQxMi43NjRjLTY5LjY4OSA1Ni44ODktMjg3LjI4OSA1Ni44ODktMzU1LjU1NiAwLTY5LjY4OS01Ni44ODktNjIuNTc4LTMwMC4wODkgMC0zNjQuMDg5czI5Mi45NzgtNjQgMzU1LjU1NiAwIDY5LjY4OSAzMDcuMjAxIDAgMzY0LjA4OXoiIGZpbGw9IiM4ZGM2NDAiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjI5LjEzOCAzMTMuMjA5Yy02Mi41NzggNDkuNzc4LTEzMi4yNjcgNzUuMzc4LTE5Ny42ODkgNzYuOC00OC4zNTYtODIuNDg5LTM4LjQtMjgzLjAyMiAxOC40ODktMzQxLjMzMyA1MS4yLTUyLjYyMiAyMTEuOTExLTYyLjU3OCAzMDQuMzU2LTI5Ljg2NyAyMi43NTUgOTMuODY3LTI0LjE3OCAyMTMuMzMzLTEyNS4xNTYgMjk0LjR6IiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0xOTUuMDA0IDM1NC40NTNjLTkuOTU2IDAtMTkuOTExLTQuMjY3LTI1LjYtMTIuOGwtNzkuNjQ0LTEwMi40Yy0xMS4zNzgtMTQuMjIyLTguNTMzLTM0LjEzMyA1LjY4OS00NS41MTFzMzQuMTMzLTguNTMzIDQ1LjUxMSA1LjY4OWw1NC4wNDQgNjkuNjg5IDExOS40NjctMTU1LjAyMmMxMS4zNzgtMTQuMjIyIDMxLjI4OS0xNy4wNjcgNDUuNTExLTUuNjg5czE3LjA2NyAzMS4yODkgNS42ODkgNDUuNTExTDIyMC42MDQgMzQxLjY1M2MtNy4xMTEgNy4xMTEtMTUuNjQ0IDEyLjgtMjUuNiAxMi44eiIvPjwvZz48L3N2Zz4=')
+}
+
+.consbullets li {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ1NS40MzEgNDU1LjQzMSIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDA1LjQ5MyA0MTIuNzY0Yy02OS42ODkgNTYuODg5LTI4Ny4yODkgNTYuODg5LTM1NS41NTYgMC02OS42ODktNTYuODg5LTYyLjU3OC0zMDAuMDg5IDAtMzY0LjA4OXMyOTIuOTc4LTY0IDM1NS41NTYgMCA2OS42ODkgMzA3LjIwMSAwIDM2NC4wODl6IiBmaWxsPSIjZjc3ZDc1Ii8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTIyOS4xMzggMzEzLjIwOWMtNjIuNTc4IDQ5Ljc3OC0xMzIuMjY3IDc1LjM3OC0xOTcuNjg5IDc2LjgtNDguMzU2LTgyLjQ4OS0zOC40LTI4My4wMjIgMTguNDg5LTM0MS4zMzMgNTEuMi01Mi42MjIgMjExLjkxMS02Mi41NzggMzA0LjM1Ni0yOS44NjcgMjIuNzU1IDkzLjg2Ny0yNC4xNzggMjEzLjMzMy0xMjUuMTU2IDI5NC40eiIgb3BhY2l0eT0iLjIiLz48cGF0aCBkPSJNMzM1LjgwNCAzMzUuOTY0Yy04LjUzMzMgOC41MzMtMjIuNzU2IDguNTMzLTMyLjcxMSAwbC03NS4zNzgtNzUuMzc4LTc1LjM3OCA3NS4zNzhjLTguNTMzIDguNTMzLTI0LjE3OCA4LjUzMy0zMi43MTEgMHMtOC41MzMtMjQuMTc4IDAtMzIuNzExbDc2LjgtNzUuMzc4LTc2LjgtNzUuMzc4Yy04LjUzMy04LjUzMy04LjUzMy0yMi43NTYgMC0zMi43MTEgOC41MzMtOC41MzMgMjQuMTc4LTguNTMzIDMyLjcxMSAwbDc1LjM3OCA3Ni44IDc1LjM3OC03Ni44YzguNTMzLTguNTMzIDIyLjc1Ni04LjUzMyAzMi43MTEgMCA4LjUzMyA4LjUzMyA4LjUzMyAyNC4xNzggMCAzMi43MTFsLTc1LjM3OCA3NS4zNzggNzUuMzc4IDc1LjM3OGM5Ljk1NiA5Ljk1NiA5Ljk1NiAyNC4xNzggMCAzMi43MTF6Ii8+PC9nPjwvc3ZnPgo=')
+}
+
+.table_row .getTable {
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	overflow-wrap: break-word
+}
+
+.table_row .getTable td,
+.table_row .getTable th {
+	border: 1px solid #000;
+	padding: 5px;
+	text-align: left
+}
+
+.table_row .getTable th {
+	background-color: #f2f2f2
+}
+
+#table {
+	margin-bottom: 35px
+}
+
+.grayboxshadow {
+	box-shadow: 0 0 5px gray;
+	padding: 25px
+}
+
+.centerText {
+	text-align: center
+}
+
+.sampleTitle {
+	color: #333;
+	padding: 0;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+i {
+	font-size: 105%;
+	color: #555;
+}
+
+.topImage {
+	float: right;
+	width: 50%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+@media (max-width: 750px) {
+	.topImage {
+		margin-top: 25px;
+		float: none;
+		width: 100%;
+	}
+}
+
+ol.prosbullets {
+	margin: 5px;
+}
+
+ol.consbullets {
+	margin: 5px;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script></head>
+
+<body class="post-template-default single single-post postid-212 single-format-standard wp-custom-logo underline rightsidebar" itemscope itemtype="http://schema.org/WebPage">
+
+    <div id="page" class="site"><a aria-label="skip to content" class="skip-link" href="#content">Skip to Content</a>
+        <div class="responsive-nav">
+            <nav id="res-navigation" class="main-navigation" role="navigation">
+        <div class="primary-menu-list main-menu-modal cover-modal" data-modal-target-string=".main-menu-modal">
+            <button class="close close-main-nav-toggle" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".main-menu-modal"></button>
+            <div class="mobile-menu" aria-label="Mobile">
+                <div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu main-menu-modal"><li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="/">Home</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-42"><a rel="privacy-policy" href="/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/contact-us/">Contact Us</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/dmca/">DMCA</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="/terms-and-conditions/">Terms And Conditions</a></li>
+</ul></div>            </div>
+        </div>
+    </nav><!-- #site-navigation -->
+                        </div> <!-- .responsive-nav -->
+    
+    <header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="container">
+            <div class="header-main">
+                        <div class="site-branding" itemscope itemtype="http://schema.org/Organization">
+            <a href="/" class="custom-logo-link" rel="home"><img width="250" height="250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%20250'%3E%3C/svg%3E" class="custom-logo" alt="365-kw.com" decoding="async" fetchpriority="high" data-lazy-srcset="/wp-content/uploads/2020/11/logotest_250.jpg 250w, /wp-content/uploads/2020/11/logotest_250-150x150.jpg 150w, /wp-content/uploads/2020/11/logotest_250-60x60.jpg 60w" data-lazy-sizes="(max-width: 250px) 100vw, 250px" data-lazy-src="/wp-content/uploads/2020/11/logotest_250.jpg" /><noscript><img width="250" height="250" src="/wp-content/uploads/2020/11/logotest_250.jpg" class="custom-logo" alt="365-kw.com" decoding="async" fetchpriority="high" srcset="/wp-content/uploads/2020/11/logotest_250.jpg 250w, /wp-content/uploads/2020/11/logotest_250-150x150.jpg 150w, /wp-content/uploads/2020/11/logotest_250-60x60.jpg 60w" sizes="(max-width: 250px) 100vw, 250px" /></noscript></a>                    <p class="site-title" itemprop="name"><a href="/" rel="home" itemprop="url">365-kw.com</a></p>
+                                    <p class="site-description" itemprop="description">All The Best Things to Do &amp; Trip Ideas</p>
+                        </div>    
+                                </div><!-- .header-main -->
+            <div class="nav-wrap">
+                	<nav id="site-navigation" class="main-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <button class="toggle-btn" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+        </button>
+        <div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-42"><a rel="privacy-policy" href="/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="/dmca/">DMCA</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="/terms-and-conditions/">Terms And Conditions</a></li>
+</ul></div>	</nav><!-- #site-navigation -->
+                                </div><!-- .nav-wrap -->
+        </div><!-- .container -->    
+    </header>
+<div id="content" class="site-content">            <header class="page-header" style="background-image: url( '/wp-content/uploads/2024/03/DALL·E-2024-03-12-05.59.57-A-serene-panoramic-view-of-Burlington-Vermont-showcasing-its-picturesque-waterfront-on-Lake-Champlain-with-the-Adirondack-Mountains-in-the-backgrou-1-4260910-1792x700.webp' );">
+                <div class="container">
+        			<span class="category" itemprop="about"><a href="/category/travel/" rel="category tag">Travel</a></span><h1 class="page-title">Day Trips From Burlington, Vermont</h1><div class="entry-meta"><span class="byline" itemprop="author" itemscope itemtype="https://schema.org/Person"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><defs><style>.auta{fill:none;}.auta,.autb{stroke:rgba(0,0,0,0);}.autb{fill:#ccc6c8;}</style></defs><g transform="translate(0.5 0.5)"><path class="auta" d="M0,0H18V18H0Z"></path><g transform="translate(1.5 1.5)"><path class="autb" d="M9.5,2A7.5,7.5,0,1,0,17,9.5,7.5,7.5,0,0,0,9.5,2ZM5.8,14.21c.322-.675,2.287-1.335,3.7-1.335s3.382.66,3.7,1.335a5.944,5.944,0,0,1-7.395,0Zm8.468-1.088c-1.073-1.3-3.675-1.747-4.77-1.747s-3.7.443-4.77,1.747a6,6,0,1,1,9.54,0Z" transform="translate(-2 -2)"></path><path class="autb" d="M11.125,6A2.625,2.625,0,1,0,13.75,8.625,2.618,2.618,0,0,0,11.125,6Zm0,3.75A1.125,1.125,0,1,1,12.25,8.625,1.123,1.123,0,0,1,11.125,9.75Z" transform="translate(-3.625 -3)"></path></g></g></svg><span class="author" itemprop="name"><a class="url fn n" href="/author/admin/" itemprop="url">admin</a></span></span><span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/day-trips-from-burlington-vermont/" rel="bookmark"><time class="entry-date published updated" datetime="2024-03-31T12:11:44+03:00" itemprop="dateModified">31.03.2024</time></time><time class="updated" datetime="2024-03-12T08:06:48+03:00" itemprop="datePublished">12.03.2024</time></a></span><span class="comment-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.943 15.465"><defs><style>.co{fill:none;stroke:#ccc6c8;stroke-width:1.3px;}</style></defs><path class="co" d="M15.425,11.636H12.584v2.03L9.2,11.636H1.218A1.213,1.213,0,0,1,0,10.419v-9.2A1.213,1.213,0,0,1,1.218,0H15.425a1.213,1.213,0,0,1,1.218,1.218v9.2A1.213,1.213,0,0,1,15.425,11.636Z" transform="translate(0.65 0.65)"></path></svg><a href="/day-trips-from-burlington-vermont/">No Comment<span class="screen-reader-text"> on Day Trips From Burlington, Vermont</span></a></span></div><div class="breadcrumb-wrapper"><div class="container" >
+                <div id="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList"> 
+                    <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                        <span class="separator"><span class="separator"><i class="fa fa-angle-right"></i></span></span>
+                    </span> <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/category/travel/"><span itemprop="name">Travel </span></a><meta itemprop="position" content="2" /><span class="separator"><span class="separator"><i class="fa fa-angle-right"></i></span></span></span> <span class="current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/day-trips-from-burlington-vermont/"><span itemprop="name">Day Trips From Burlington, Vermont</span></a><meta itemprop="position" content="3" /></span></div></div></div><!-- .breadcrumb-wrapper -->                </div>
+    		</header><!-- .page-header -->
+                    <div class="container">
+        
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+            
+<article id="post-212" class="post-212 post type-post status-publish format-standard has-post-thumbnail hentry category-travel">
+	    <div class="entry-content" itemprop="text">
+		<p><span style="font-weight: 300;">Burlington, Vermont, located on the eastern shores of Lake Champlain, is more than just a picturesque New England town; it&#8217;s a gateway to a myriad of experiences that capture the essence of the American Northeast. This vibrant community, known for its lively streets, eclectic shops, and a strong sense of environmental stewardship, serves as an ideal starting point for numerous day trips that offer a deep dive into the region&#8217;s natural beauty, rich history, and culinary delights. &#8220;Day trips from Burlington, Vermont&#8221; isn&#8217;t just a phrase; it&#8217;s an invitation to explore the multifaceted charm of Vermont and beyond.</span></p>
+<p><span style="font-weight: 300;">The appeal of Burlington as a hub for exploration cannot be overstated. Its location, sandwiched between the Adirondack Mountains of New York and the Green Mountains of Vermont, presents an unparalleled opportunity for outdoor enthusiasts.</span></p>
+<p><span style="font-weight: 300;">Culturally, Burlington and its surroundings offer a rich tapestry of experiences that reflect the history and spirit of New England. The area&#8217;s small towns and villages are treasure troves of American heritage, with their historic buildings, quaint shops, and local markets selling everything from maple syrup to fine crafts. The region&#8217;s commitment to supporting local artisans and farmers is evident in the bustling farmers markets, artisanal breweries, and farm-to-table restaurants that dot the landscape, offering tastes that are as varied as they are delightful.</span></p>
+<h2><b>Exploring the Historic Streets of Montpelier </b><span style="font-weight: 400;"> </span></h2>
+<h3><b>Vermont&#8217;s capital: A blend of history, culture, and local cuisine.</b></h3>
+<p><span style="font-weight: 300;">Exploring the historic streets of Montpelier, Vermont&#8217;s capital, is akin to stepping into a living museum where every cobblestone, corner, and café tells a story. Located in the heart of the Green Mountains, Montpelier is not only the seat of government but also a repository of the state&#8217;s rich history, vibrant culture, and culinary excellence. This exploration delves into the essence of Montpelier, uncovering the layers that make it a must-visit destination for those embarking on day trips from Burlington, VT.</span></p>
+<p><span style="font-weight: 300;">Montpelier&#8217;s charm is immediately evident as you wander its streets. As the smallest state capital in the United States, it offers a unique blend of political significance and small-town warmth. The Vermont State House, with its gleaming gold dome, stands as a testament to the state&#8217;s history and governance. Tours of this historic building provide insight into Vermont&#8217;s legislative process while showcasing exquisite 19th-century architecture and artistry. The surrounding grounds, with meticulously maintained gardens and statues, serve as a tranquil retreat from the bustling city life.</span></p>
+<figure id="attachment_246" aria-describedby="caption-attachment-246" style="width: 1200px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-246" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20630'%3E%3C/svg%3E" alt="montpelier vermont" width="1200" height="630" data-lazy-srcset="/wp-content/uploads/2024/03/image-90-9044794.webp 1200w, /wp-content/uploads/2024/03/image-90-9044794-300x158.webp 300w, /wp-content/uploads/2024/03/image-90-9044794-1024x538.webp 1024w, /wp-content/uploads/2024/03/image-90-9044794-768x403.webp 768w, /wp-content/uploads/2024/03/image-90-9044794-114x60.webp 114w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="/wp-content/uploads/2024/03/image-90-9044794.webp" /><noscript><img decoding="async" class="size-full wp-image-246" src="/wp-content/uploads/2024/03/image-90-9044794.webp" alt="montpelier vermont" width="1200" height="630" srcset="/wp-content/uploads/2024/03/image-90-9044794.webp 1200w, /wp-content/uploads/2024/03/image-90-9044794-300x158.webp 300w, /wp-content/uploads/2024/03/image-90-9044794-1024x538.webp 1024w, /wp-content/uploads/2024/03/image-90-9044794-768x403.webp 768w, /wp-content/uploads/2024/03/image-90-9044794-114x60.webp 114w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript><figcaption id="caption-attachment-246" class="wp-caption-text">Montpelier &#8211; Source: Thrillist</figcaption></figure>
+<h3><b>A Cultural Tapestry</b></h3>
+<p><span style="font-weight: 300;">Montpelier&#8217;s cultural landscape is as rich and varied as its history. The city is a haven for artists, musicians, and writers, drawn by its natural beauty and supportive community. This creative energy is evident in the numerous galleries, theaters, and music venues that dot the city. The T.W. Wood Gallery, for instance, showcases Vermont artists&#8217; work, offering a glimpse into the local artistic talent.</span></p>
+<p><span style="font-weight: 300;">The city&#8217;s cultural calendar is packed with events that celebrate its artistic spirit, from the Montpelier Art Walk, where galleries and businesses open their doors to art lovers, to live music performances at the Vermont College of Fine Arts. These events not only provide entertainment but also foster a sense of community and connection among residents and visitors alike.</span></p>
+<h3><b>A Culinary Adventure</b></h3>
+<p><span style="font-weight: 300;">No exploration of Montpelier would be complete without indulging in its culinary offerings. The city&#8217;s food scene is a reflection of Vermont&#8217;s commitment to farm-to-table dining, with restaurants and cafés serving up dishes made from locally sourced ingredients. From artisanal cheese shops to craft breweries, the flavors of Montpelier are a testament to the region&#8217;s agricultural heritage and culinary innovation.</span></p>
+<h2><b>The Natural Wonders of Stowe  </b></h2>
+<h3><b>The Natural Wonders of Stowe: A Gateway to Adventure and Serenity</b></h3>
+<p><span style="font-weight: 300;">Located amidst the rolling peaks of the Green Mountains in Vermont,<a href="https://www.stowe.com/"> Stowe</a> emerges as a quintessential New England gem, offering an unparalleled blend of adventure, scenic beauty, and tranquil retreats. Renowned for its picturesque landscapes, vibrant seasonal colors, and a rich array of outdoor activities, Stowe represents more than just a destination; it&#8217;s a journey into the heart of nature&#8217;s magnificence. As one of the most coveted day trips from Burlington, VT, Stowe invites explorers to delve into its natural wonders, where every trail, slope, and vista tells a story of discovery and awe.</span></p>
+<h3><b>Embracing the Great Outdoors: Hiking in Stowe</b></h3>
+<p><span style="font-weight: 300;">The essence of Stowe&#8217;s allure lies in its expansive network of hiking trails, each offering a unique vantage point to witness the grandeur of Vermont&#8217;s wilderness. From leisurely walks through lush forests to challenging treks up rugged mountains, the trails cater to adventurers of all levels. The pinnacle of hiking experiences is the ascent to Mount Mansfield, Vermont&#8217;s highest peak, where the reward is a breathtaking panorama that stretches across the Green Mountains. The journey through dense forests and over rocky paths is emblematic of the resilience and beauty of the natural world, culminating in a summit that feels like standing on top of the world.</span></p>
+<h3><b>Winter&#8217;s Wonderland: Skiing in Stowe</b></h3>
+<p><span style="font-weight: 300;">As the seasons shift and snow blankets the landscape, Stowe transforms into a winter wonderland, beckoning skiers and snowboarders from across the globe. The town&#8217;s reputation as a premier skiing destination is anchored by the Stowe Mountain Resort, where the slopes of Mount Mansfield and Spruce Peak offer diverse terrains for all skill levels. The thrill of descending these snow-covered mountains, with the crisp air biting at your cheeks and the world seeming to rush by in a blur of white, is an exhilarating experience that captures the essence of winter&#8217;s allure.</span></p>
+<p><span style="font-weight: 300;">Beyond the adrenaline of downhill skiing, Stowe&#8217;s winter landscape opens up a world of outdoor activities. Cross-country skiing and snowshoeing trails provide a more tranquil mode of exploration, where the silence of the snow-covered forest envelops you in a peaceful embrace. The sparkling ice of frozen lakes beckons ice skaters, while sleigh rides offer a nostalgic journey through wintry scenes straight out of a storybook.</span></p>
+<figure id="attachment_247" aria-describedby="caption-attachment-247" style="width: 1000px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-247" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201000%20777'%3E%3C/svg%3E" alt="Stowe vermont" width="1000" height="777" data-lazy-srcset="/wp-content/uploads/2024/03/image-93-4958487.webp 1000w, /wp-content/uploads/2024/03/image-93-4958487-300x233.webp 300w, /wp-content/uploads/2024/03/image-93-4958487-768x597.webp 768w, /wp-content/uploads/2024/03/image-93-4958487-77x60.webp 77w" data-lazy-sizes="(max-width: 1000px) 100vw, 1000px" data-lazy-src="/wp-content/uploads/2024/03/image-93-4958487.webp" /><noscript><img decoding="async" class="size-full wp-image-247" src="/wp-content/uploads/2024/03/image-93-4958487.webp" alt="Stowe vermont" width="1000" height="777" srcset="/wp-content/uploads/2024/03/image-93-4958487.webp 1000w, /wp-content/uploads/2024/03/image-93-4958487-300x233.webp 300w, /wp-content/uploads/2024/03/image-93-4958487-768x597.webp 768w, /wp-content/uploads/2024/03/image-93-4958487-77x60.webp 77w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript><figcaption id="caption-attachment-247" class="wp-caption-text">Stowe Vermont -Source: CL Magazine</figcaption></figure>
+<h3><b>A Retreat into History and Harmony: The Trapp Family Lodge</b></h3>
+<p><span style="font-weight: 300;">Amidst the natural wonders of Stowe lies a cultural treasure with a story as captivating as the landscape itself: the Trapp Family Lodge. Founded by the von Trapp family, whose tale of music, escape, and new beginnings inspired &#8220;The Sound of Music,&#8221; this mountain resort embodies the harmony between man and nature. The lodge, with its Austrian-inspired architecture and warm, welcoming atmosphere, offers a peaceful retreat that feels worlds away from the hustle and bustle of daily life.</span></p>
+<p><span style="font-weight: 300;">Visitors to the Trapp Family Lodge are invited to partake in a variety of activities that celebrate the great outdoors and the family&#8217;s rich heritage. From guided nature walks that explore the surrounding beauty to musical performances that echo the family&#8217;s legacy, the lodge provides a unique blend of entertainment and relaxation. The on-site brewery and bakery offer a taste of Austria, with traditional recipes and craft beers that are a testament to the family&#8217;s commitment to quality and tradition.</span></p>
+<h2><b>Lake Champlain Islands: A Serene Getaway  </b></h2>
+<h3><b>Island hopping, vineyards, and beaches: A slower pace of life.</b></h3>
+<p><span style="font-weight: 300;">Embarking on a journey to the <a href="https://www.helloburlingtonvt.com/blog/post/a-day-in-the-lake-champlain-islands/">Lake Champlain Islands</a> offers a serene getaway from the bustling streets of Burlington, Vermont. This chain of islands located in the vast expanse of Lake Champlain serves as a bridge not just between Vermont and New York but between the present and a slower, more contemplative pace of life reminiscent of a bygone era. This exploration of the islands—each with its own unique character and charm—invites visitors to indulge in the simple pleasures of island hopping, savoring local wines at sun-drenched vineyards, and relaxing on tranquil beaches. </span></p>
+<figure id="attachment_248" aria-describedby="caption-attachment-248" style="width: 1980px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-248" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201980%201485'%3E%3C/svg%3E" alt="Lake Champlain Islands" width="1980" height="1485" data-lazy-srcset="/wp-content/uploads/2024/03/image-94-6262491.webp 1980w, /wp-content/uploads/2024/03/image-94-6262491-300x225.webp 300w, /wp-content/uploads/2024/03/image-94-6262491-1024x768.webp 1024w, /wp-content/uploads/2024/03/image-94-6262491-768x576.webp 768w, /wp-content/uploads/2024/03/image-94-6262491-1536x1152.webp 1536w, /wp-content/uploads/2024/03/image-94-6262491-80x60.webp 80w, /wp-content/uploads/2024/03/image-94-6262491-640x480.webp 640w, /wp-content/uploads/2024/03/image-94-6262491-110x83.webp 110w" data-lazy-sizes="(max-width: 1980px) 100vw, 1980px" data-lazy-src="/wp-content/uploads/2024/03/image-94-6262491.webp" /><noscript><img decoding="async" class="size-full wp-image-248" src="/wp-content/uploads/2024/03/image-94-6262491.webp" alt="Lake Champlain Islands" width="1980" height="1485" srcset="/wp-content/uploads/2024/03/image-94-6262491.webp 1980w, /wp-content/uploads/2024/03/image-94-6262491-300x225.webp 300w, /wp-content/uploads/2024/03/image-94-6262491-1024x768.webp 1024w, /wp-content/uploads/2024/03/image-94-6262491-768x576.webp 768w, /wp-content/uploads/2024/03/image-94-6262491-1536x1152.webp 1536w, /wp-content/uploads/2024/03/image-94-6262491-80x60.webp 80w, /wp-content/uploads/2024/03/image-94-6262491-640x480.webp 640w, /wp-content/uploads/2024/03/image-94-6262491-110x83.webp 110w" sizes="(max-width: 1980px) 100vw, 1980px" /></noscript><figcaption id="caption-attachment-248" class="wp-caption-text">Lake Champlain Islands &#8211; Source: Discovery Bicycle Tours</figcaption></figure>
+<h3><b>The Gateway to Serenity: South Hero and Grand Isle</b></h3>
+<p><span style="font-weight: 300;">Your journey begins the moment you leave the mainland, crossing the causeway into a world where time seems to slow down. South Hero, the gateway to the islands, welcomes travelers with open arms and a promise of tranquility. Here, the Apple Island Resort offers not just accommodations but an experience—a chance to wake up to the soft lapping of waves against the shore, surrounded by the lush greenery that defines Vermont&#8217;s landscapes. </span></p>
+<p><span style="font-weight: 300;">As you venture further into Grand Isle, the largest of these islands, you&#8217;re greeted by a tapestry of farms and vineyards set against the backdrop of the sparkling lake. The Grand Isle State Park presents an opportunity for camping and picnicking in a setting that feels untouched by the rush of modern life. The vineyards of Grand Isle, such as the Snow Farm Vineyard, offer tours and tastings, inviting you to savor the flavors of the region&#8217;s grapes, nurtured by the unique microclimate of the islands. The vineyard&#8217;s summer concert series, where melodies float on the evening breeze, perfectly encapsulates the islands&#8217; blend of natural beauty and cultural richness.</span></p>
+<h3><b>Isle La Motte</b></h3>
+<p><span style="font-weight: 300;"><a href="https://en.wikipedia.org/wiki/Isle_La_Motte">Isle La Motte</a>, to the north, offers a glimpse into the geological and historical tapestry that has shaped the region. The island is home to the Chazy Fossil Reef, a testament to the ancient seas that once covered this land. A visit to the Isle La Motte Preservation Trust allows you to walk among fossils dating back hundreds of millions of years, a humbling reminder of the earth&#8217;s age and history.</span></p>
+<p><span style="font-weight: 300;">The island&#8217;s history is further enriched by St. Anne&#8217;s Shrine, standing on the site of the earliest settlement in Vermont. This serene location offers not just spiritual solace but a connection to the past, with its small museum detailing the history of French explorers and Native American inhabitants of the area.</span></p>
+<h3><b>The Charm of North Hero and Knight Island</b></h3>
+<p><span style="font-weight: 300;">North Hero, the heart of the islands, exudes a quaint charm with its historic bed and breakfasts, antique shops, and the Knight Point State Park. Here, the pace of life is dictated by the rhythm of nature—sunrise and sunset, the changing tides, and the seasonal migrations of birds. Kayaking and fishing in the quiet waters around Knight Island State Park offer moments of peace and reflection, while the island&#8217;s hiking trails invite you to immerse yourself in the verdant beauty of the surroundings.</span></p>
+<p><span style="font-weight: 300;">Knight Island, accessible by boat, is a haven for those seeking solitude and a deeper connection with nature. Its pristine environment, protected as a state park, offers unparalleled opportunities for camping under the stars, away from the lights and noise of civilization.</span></p>
+<h3><b>The Lure of the Beaches</b></h3>
+<p><span style="font-weight: 300;">No visit to the Lake Champlain Islands is complete without a day spent lounging on one of its many beaches. Sand Bar State Park, connecting Grand Isle to the mainland, boasts a long, sandy beach that is perfect for swimming, sunbathing, and simply enjoying the view of the surrounding mountains. Alburgh Dunes State Park offers one of the longest natural sand beaches on Lake Champlain, a secluded spot where the waves whisper secrets of the deep and the sand invites you to leave your worries behind.</span></p>
+<h3><b>A Reflection on Island Life</b></h3>
+<p><span style="font-weight: 300;">As the day winds down and you find yourself gazing out over the lake, the islands offer a moment to reflect. Here, amidst the tranquil beauty of the Lake Champlain Islands, life moves at a different pace. It&#8217;s a place where the present holds hands with the past, where nature&#8217;s beauty is a constant companion, and where each moment invites you to slow down, breathe deeply, and savor the simplicity of being.</span></p>
+<p><span style="font-weight: 300;">The Lake Champlain Islands stand as a testament to the enduring allure of natural beauty and the timeless charm of a life lived in harmony with the environment. </span></p>
+<h2><b>The Artisanal Flavors of Shelburne  </b></h2>
+<h3><b>Shelburne Farms and Vineyard: A taste of Vermont&#8217;s finest</b><span style="font-weight: 400;">.</span></h3>
+<p><span style="font-weight: 300;">Embarking on day trips from Burlington, Vermont, offers an opportunity to explore the diverse landscapes and rich cultural tapestry of Vermont. Among the myriad of experiences waiting just a short drive away, the artisanal flavors of Shelburne stand out as a testament to Vermont&#8217;s commitment to craftsmanship, sustainability, and sheer culinary delight. This journey into Shelburne, particularly to its renowned farms and vineyard, encapsulates the essence of Vermont&#8217;s agricultural heritage and its modern renaissance in artisanal food and wine production.</span></p>
+<h3><b>The Heart of Shelburne: A Blend of Tradition and Innovation</b></h3>
+<p><span style="font-weight: 300;">Shelburne, located just a few miles south of Burlington, is more than a scenic town with picturesque landscapes; it&#8217;s a hub of innovation grounded in deep-rooted traditions. The town&#8217;s commitment to preserving the beauty of Vermont&#8217;s countryside while embracing sustainable practices has made it a beacon for those seeking to reconnect with the land and its bounty. At the heart of this commitment are Shelburne Farms and the Shelburne Vineyard, each offering a unique glimpse into the artisanal spirit that defines this region.</span></p>
+<h3><b>Shelburne Farms: A Living Classroom of Sustainability</b></h3>
+<p><span style="font-weight: 300;">Shelburne Farms is not merely a working farm but a 1,400-acre testament to environmental stewardship and agricultural education. Founded in the late 19th century, this historic estate has evolved from a model agricultural estate into a nonprofit organization dedicated to educating for a sustainable future. Visitors are invited to explore the breathtaking landscapes, from rolling pastures to wooded trails, each step offering an immersive experience in sustainable farming practices.</span></p>
+<p><span style="font-weight: 300;">The farm&#8217;s commitment to producing high-quality, artisanal products is evident in its cheese-making operation, which has garnered national acclaim. The process is an art form in itself, combining time-honored techniques with innovative practices to produce award-winning cheeses. From the milking of the farm&#8217;s Brown Swiss cows to the careful aging process, each step reflects a dedication to quality and sustainability. Tasting these cheeses is not just a culinary delight but a direct connection to the land and the labor of love that brings these flavors to life.</span></p>
+<figure id="attachment_249" aria-describedby="caption-attachment-249" style="width: 2500px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-249" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201666'%3E%3C/svg%3E" alt="Shelburne Farms and Vineyard" width="2500" height="1666" data-lazy-srcset="/wp-content/uploads/2024/03/image-95-4857447.webp 2500w, /wp-content/uploads/2024/03/image-95-4857447-300x200.webp 300w, /wp-content/uploads/2024/03/image-95-4857447-1024x682.webp 1024w, /wp-content/uploads/2024/03/image-95-4857447-768x512.webp 768w, /wp-content/uploads/2024/03/image-95-4857447-1536x1024.webp 1536w, /wp-content/uploads/2024/03/image-95-4857447-2048x1365.webp 2048w, /wp-content/uploads/2024/03/image-95-4857447-90x60.webp 90w, /wp-content/uploads/2024/03/image-95-4857447-370x247.webp 370w, /wp-content/uploads/2024/03/image-95-4857447-776x517.webp 776w" data-lazy-sizes="(max-width: 2500px) 100vw, 2500px" data-lazy-src="/wp-content/uploads/2024/03/image-95-4857447.webp" /><noscript><img decoding="async" class="size-full wp-image-249" src="/wp-content/uploads/2024/03/image-95-4857447.webp" alt="Shelburne Farms and Vineyard" width="2500" height="1666" srcset="/wp-content/uploads/2024/03/image-95-4857447.webp 2500w, /wp-content/uploads/2024/03/image-95-4857447-300x200.webp 300w, /wp-content/uploads/2024/03/image-95-4857447-1024x682.webp 1024w, /wp-content/uploads/2024/03/image-95-4857447-768x512.webp 768w, /wp-content/uploads/2024/03/image-95-4857447-1536x1024.webp 1536w, /wp-content/uploads/2024/03/image-95-4857447-2048x1365.webp 2048w, /wp-content/uploads/2024/03/image-95-4857447-90x60.webp 90w, /wp-content/uploads/2024/03/image-95-4857447-370x247.webp 370w, /wp-content/uploads/2024/03/image-95-4857447-776x517.webp 776w" sizes="(max-width: 2500px) 100vw, 2500px" /></noscript><figcaption id="caption-attachment-249" class="wp-caption-text">Shelburne Farms and Vineyard &#8211; Source: Shelburne Vineyard</figcaption></figure>
+<h3><b>Shelburne Vineyard: A Journey Through the Vines</b></h3>
+<p><span style="font-weight: 300;">A stone&#8217;s throw from the pastoral scenes of Shelburne Farms lies Shelburne Vineyard, a pioneer in cold-climate viticulture in Vermont. This vineyard has challenged the norms of winemaking in the region, proving that with innovation and dedication, the cold, northern climate of Vermont can produce exceptional wines. The vineyard&#8217;s commitment to sustainable practices is evident in every aspect of its operation, from the careful management of the soil to the energy-efficient design of its tasting room.</span></p>
+<p><span style="font-weight: 300;">A visit to Shelburne Vineyard is a journey through the lifecycle of wine, offering insights into the challenges and triumphs of growing grapes in Vermont&#8217;s unique climate. The vineyard offers tastings that showcase the distinct character of its wines, from crisp, aromatic whites to bold, complex reds. Each glass tells a story of the land, the climate, and the meticulous care that goes into crafting each bottle. It&#8217;s an invitation to explore the nuances of Vermont&#8217;s terroir, a term that encompasses the environmental factors that influence the taste of the wine.</span></p>
+<h3><b>The Taste of Vermont&#8217;s Finest: A Culinary Experience</b></h3>
+<p><span style="font-weight: 300;">The artisanal flavors of Shelburne are not confined to cheese and wine but extend to a broader culinary experience that celebrates Vermont&#8217;s agricultural abundance. Local restaurants and cafes take pride in sourcing ingredients from nearby farms, creating dishes that are a testament to the region&#8217;s seasonal bounty. From farm-to-table dining experiences to casual eateries offering innovative takes on classic Vermont fare, Shelburne offers a culinary landscape as diverse and vibrant as its natural scenery.</span></p>
+<h2><b>Adventure in the Green Mountains  </b></h2>
+<h3><b>Outdoor activities and breathtaking views: A playground for nature lovers.</b></h3>
+<p><span style="font-weight: 300;">Embarking on an adventure in the Green Mountains offers an unrivaled opportunity to immerse oneself in the raw beauty and serene wilderness of Vermont. This majestic mountain range, a jewel in the New England landscape, stretches across the state, serving as a natural playground for nature lovers and outdoor enthusiasts. The essence of &#8220;day trips from Burlington VT&#8221; is captured through the exploration of these peaks and valleys, where every trail, vista, and natural wonder tells a story of the land&#8217;s ancient history and vibrant present.</span></p>
+<h3><b>The Allure of the Green Mountains</b></h3>
+<p><span style="font-weight: 300;">The Green Mountains are more than just a series of peaks; they are a testament to the enduring beauty of nature, offering a sanctuary for wildlife and a haven for those seeking solace or adventure away from the bustle of daily life. The range, part of the Appalachian Mountains, is renowned for its dense forests, rocky peaks, and the famed Long Trail, which traverses its spine, presenting hikers with challenges and rewards in equal measure.</span></p>
+<figure id="attachment_250" aria-describedby="caption-attachment-250" style="width: 640px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20480'%3E%3C/svg%3E" alt="Green Mountains  " width="640" height="480" data-lazy-srcset="/wp-content/uploads/2024/03/image-97-6760800.webp 640w, /wp-content/uploads/2024/03/image-97-6760800-300x225.webp 300w, /wp-content/uploads/2024/03/image-97-6760800-80x60.webp 80w, /wp-content/uploads/2024/03/image-97-6760800-110x83.webp 110w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="/wp-content/uploads/2024/03/image-97-6760800.webp" /><noscript><img decoding="async" class="size-full wp-image-250" src="/wp-content/uploads/2024/03/image-97-6760800.webp" alt="Green Mountains  " width="640" height="480" srcset="/wp-content/uploads/2024/03/image-97-6760800.webp 640w, /wp-content/uploads/2024/03/image-97-6760800-300x225.webp 300w, /wp-content/uploads/2024/03/image-97-6760800-80x60.webp 80w, /wp-content/uploads/2024/03/image-97-6760800-110x83.webp 110w" sizes="(max-width: 640px) 100vw, 640px" /></noscript><figcaption id="caption-attachment-250" class="wp-caption-text">Green Mountains  &#8211; Source; Vermont</figcaption></figure>
+<h3><b>Hiking and Trekking</b></h3>
+<p><span style="font-weight: 300;">With trails ranging from gentle walks to rigorous hikes, the Green Mountains cater to every level of outdoor enthusiast. The Camels Hump and Mount Mansfield stand out as iconic hikes, offering panoramic views that stretch to the horizon, encompassing rolling hills, verdant valleys, and the shimmering waters of Lake Champlain. Each step along these paths brings a deeper connection to nature, with the changing seasons painting the landscape in a kaleidoscope of colors.</span></p>
+<h3><b>Skiing and Snowboarding</b></h3>
+<p><span style="font-weight: 300;">In the winter months, the Green Mountains transform into a wonderland for skiing and snowboarding. Resorts like Stowe, Killington, and Sugarbush offer world-class slopes that cater to all skill levels, from gentle runs for beginners to challenging terrains for the experienced. Beyond the thrill of the descent, these resorts provide a cozy retreat, with warm fireplaces and hot cocoa to unwind after a day on the mountains.</span></p>
+<h3><b>Mountain Biking and Cycling</b></h3>
+<p><span style="font-weight: 300;">The rugged terrain of the Green Mountains also makes it a prime destination for mountain biking. Trails crisscross the landscape, offering adrenaline-pumping downhills, technical challenges, and scenic paths that meander through forests and around mountain lakes. For a more leisurely experience, cycling routes along the valleys offer breathtaking views and a peaceful way to explore the countryside.</span></p>
+<h3><b>Fishing and Kayaking</b></h3>
+<p><span style="font-weight: 300;">The rivers and lakes located in the valleys of the Green Mountains are a paradise for anglers and kayakers. Pristine waters, teeming with trout and other freshwater species, offer a tranquil setting for fishing, while the currents provide varying levels of challenge for kayaking and canoeing. The serene environment, punctuated only by the sound of water and wildlife, creates a sense of harmony with the natural world.</span></p>
+<h2><b>The Historic Charm of Woodstock  </b></h2>
+<h3><b>Covered bridges and quaint downtown</b></h3>
+<p><span style="font-weight: 300;">Embarking on Day trips from Burlington, Vermont, to Woodstock introduces travelers to a quintessentially Vermont experience, weaving through the fabric of time to a place where history, nature, and community converge in a picturesque tableau. This journey to Woodstock is not just a physical traverse across the beautiful landscape of Vermont but also a temporal voyage back to a simpler yet profoundly rich period of American heritage. Woodstock, with its historic charm, covered bridges, and quaint downtown, offers an immersive exploration into the essence of New England&#8217;s beauty and tradition.</span></p>
+<h3><b>The Journey to Woodstock</b></h3>
+<p><span style="font-weight: 300;">The route from Burlington to Woodstock is a prelude to the town&#8217;s enchanting character, winding through the verdant Green Mountains, past rolling hillsides dotted with dairy farms and maple groves. As the miles unfold, the modern trappings of life gradually give way to landscapes that seem to be captured in a timeless embrace, setting the stage for what awaits in Woodstock.</span></p>
+<figure id="attachment_251" aria-describedby="caption-attachment-251" style="width: 1440px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-251" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20810'%3E%3C/svg%3E" alt="Woodstock, Vermont" width="1440" height="810" data-lazy-srcset="/wp-content/uploads/2024/03/image-98-6831595.webp 1440w, /wp-content/uploads/2024/03/image-98-6831595-300x169.webp 300w, /wp-content/uploads/2024/03/image-98-6831595-1024x576.webp 1024w, /wp-content/uploads/2024/03/image-98-6831595-768x432.webp 768w, /wp-content/uploads/2024/03/image-98-6831595-107x60.webp 107w" data-lazy-sizes="(max-width: 1440px) 100vw, 1440px" data-lazy-src="/wp-content/uploads/2024/03/image-98-6831595.webp" /><noscript><img decoding="async" class="size-full wp-image-251" src="/wp-content/uploads/2024/03/image-98-6831595.webp" alt="Woodstock, Vermont" width="1440" height="810" srcset="/wp-content/uploads/2024/03/image-98-6831595.webp 1440w, /wp-content/uploads/2024/03/image-98-6831595-300x169.webp 300w, /wp-content/uploads/2024/03/image-98-6831595-1024x576.webp 1024w, /wp-content/uploads/2024/03/image-98-6831595-768x432.webp 768w, /wp-content/uploads/2024/03/image-98-6831595-107x60.webp 107w" sizes="(max-width: 1440px) 100vw, 1440px" /></noscript><figcaption id="caption-attachment-251" class="wp-caption-text">Woodstock, Vermont &#8211; Source: Woodstock, Vermont</figcaption></figure>
+<h3><b>Woodstock&#8217;s Historic Core</b></h3>
+<p><span style="font-weight: 300;">Upon arrival, Woodstock&#8217;s allure is immediately evident. The town center, with its meticulously preserved buildings and homes, whispers tales of the past, inviting visitors to step back in time. The Woodstock Green, a focal point of the community, is surrounded by historic homes and churches, their architecture a testament to the care and pride of generations. A leisurely stroll through the downtown area reveals a vibrant tapestry of local shops, galleries, and eateries, each adding a unique thread to the town&#8217;s cultural fabric.</span></p>
+<h3><b>Covered Bridges: Icons of New England Charm</b></h3>
+<p><span style="font-weight: 300;">No exploration of Woodstock&#8217;s historic charm would be complete without a visit to its iconic covered bridges. These structures, more than just functional crossings over the Ottauquechee River and its tributaries, are symbolic of New England&#8217;s architectural ingenuity and aesthetic sensibility. The Taftsville Covered Bridge, one of the oldest in Vermont, and the Middle Covered Bridge, located just a stone&#8217;s throw from the town center, serve as portals to an era when life moved at the pace of a horse-drawn carriage. These bridges are not merely to be seen but experienced, offering a palpable connection to the history and stories they&#8217;ve witnessed over the centuries.</span></p>
+<h3><b>The Quintessence of Vermont: Nature and Agriculture</b></h3>
+<p><span style="font-weight: 300;">Woodstock&#8217;s surroundings are a vivid reminder of Vermont&#8217;s deep-rooted connection to the land. The Billings Farm &amp; Museum, just outside the town center, is a working farm and museum dedicated to Vermont&#8217;s rural heritage. Here, visitors can engage with the state&#8217;s agricultural traditions, learning about the art of dairy farming, the rhythm of the seasons, and the community&#8217;s commitment to land stewardship. The farm&#8217;s Jersey cows, draft horses, and sheep are not only a nod to the past but a continuation of Woodstock&#8217;s living heritage.</span></p>
+<h3><b>A Tapestry of Trails: Outdoor Adventures</b></h3>
+<p><span style="font-weight: 300;">For those drawn to the natural beauty that envelopes Woodstock, a network of trails offers an invitation to explore the area&#8217;s scenic landscapes. From leisurely walks along the Ottauquechee River to more challenging hikes in the Marsh-Billings-Rockefeller National Historical Park, the trails around Woodstock cater to outdoor enthusiasts of all levels. Each path unfolds a panorama of the region&#8217;s natural splendor, from verdant forests and rolling meadows to sparkling streams and panoramic mountain vistas.</span></p>
+<h3><b>Cultural Richness: Art, Music, and Festivals</b></h3>
+<p><span style="font-weight: 300;">Woodstock&#8217;s cultural scene is as vibrant as its natural and historical settings. The town hosts a variety of events throughout the year, from art exhibits and music concerts to traditional festivals that celebrate the seasons, the land, and the community&#8217;s creative spirit. The Woodstock Film Festival and the Wassail Weekend are just two examples of events that draw visitors and locals alike, fostering a sense of community and shared appreciation for the arts and culture.</span></p>
+<h2><b>Thrills at Killington Resort  </b></h2>
+<h3><b>Year-round excitement: From skiing to mountain biking.</b></h3>
+<p><span style="font-weight: 300;">Embarking on  day trips from Burlington, Vermont, to Killington Resort unfolds an adventure that transcends the seasons, a journey where the thrill of outdoor sports and the beauty of Vermont&#8217;s landscape converge. Just under a two-hour drive from Burlington, Killington stands as a beacon for adventurers, offering a variety of activities that cater to every level of enthusiasm and expertise, from the adrenaline-pumping rush of skiing down its famed slopes to the exhilarating challenge of mountain biking through verdant trails. This exploration of Killington Resort will delve into the myriad of experiences it offers, showcasing why it&#8217;s a premier destination for those seeking excitement any time of the year.</span></p>
+<h3><b>Winter Wonderland: Skiing and Snowboarding</b></h3>
+<p><span style="font-weight: 300;">Winter at Killington Resort is a spectacle of snowy peaks and pristine trails, making it &#8220;The Beast of the East.&#8221; With over 1,500 skiable acres and 155 trails, the resort caters to skiers and snowboarders of all levels. Beginners can take comfort in the gentle learning curves of the Bunny Slopes, while experts challenge themselves on the double-black diamond trails, testing their limits against some of the most daunting terrains in the East. The resort&#8217;s state-of-the-art snowmaking capabilities ensure that the slopes remain in top condition throughout the season, providing a reliable playground for winter sports enthusiasts.</span></p>
+<p><span style="font-weight: 300;">Beyond the slopes, Killington offers a range of winter activities that add to its allure. Snowshoeing and cross-country skiing present more serene ways to explore the winter landscape, offering moments of tranquility amidst the exhilarating pace of downhill sports. The snow-tubing park, with its dedicated lifts and groomed lanes, provides fun for the whole family, promising laughter-filled descents down the snowy runs.</span></p>
+<figure id="attachment_252" aria-describedby="caption-attachment-252" style="width: 1600px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-252" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201060'%3E%3C/svg%3E" alt="Killington Resort  " width="1600" height="1060" data-lazy-srcset="/wp-content/uploads/2024/03/image-99-6700107.webp 1600w, /wp-content/uploads/2024/03/image-99-6700107-300x199.webp 300w, /wp-content/uploads/2024/03/image-99-6700107-1024x678.webp 1024w, /wp-content/uploads/2024/03/image-99-6700107-768x509.webp 768w, /wp-content/uploads/2024/03/image-99-6700107-1536x1018.webp 1536w, /wp-content/uploads/2024/03/image-99-6700107-91x60.webp 91w" data-lazy-sizes="(max-width: 1600px) 100vw, 1600px" data-lazy-src="/wp-content/uploads/2024/03/image-99-6700107.webp" /><noscript><img decoding="async" class="size-full wp-image-252" src="/wp-content/uploads/2024/03/image-99-6700107.webp" alt="Killington Resort  " width="1600" height="1060" srcset="/wp-content/uploads/2024/03/image-99-6700107.webp 1600w, /wp-content/uploads/2024/03/image-99-6700107-300x199.webp 300w, /wp-content/uploads/2024/03/image-99-6700107-1024x678.webp 1024w, /wp-content/uploads/2024/03/image-99-6700107-768x509.webp 768w, /wp-content/uploads/2024/03/image-99-6700107-1536x1018.webp 1536w, /wp-content/uploads/2024/03/image-99-6700107-91x60.webp 91w" sizes="(max-width: 1600px) 100vw, 1600px" /></noscript><figcaption id="caption-attachment-252" class="wp-caption-text">Killington Resort  &#8211; Source: Killington Group</figcaption></figure>
+<h3><b>Spring and Summer: A Hiker&#8217;s and Biker&#8217;s Paradise</b></h3>
+<p><span style="font-weight: 300;">As the snow melts and the landscape transforms, Killington Resort reveals a different kind of beauty. The resort becomes a magnet for hikers and mountain bikers, drawn by the extensive network of trails that wind through the Green Mountains. Hiking at Killington offers everything from leisurely walks to rigorous treks, allowing visitors to immerse themselves in the lush foliage, cascading waterfalls, and breathtaking vistas that define Vermont&#8217;s countryside.</span></p>
+<p><span style="font-weight: 300;">Mountain biking at Killington takes the thrill to another level. The resort boasts over 30 miles of trails, from the smooth and manageable to the rugged and challenging, catering to riders of all abilities. The Killington Bike Park, a highlight for many visitors, features professionally designed trails that offer a mix of terrains and obstacles, including berms, jumps, and drops, ensuring an adrenaline-fueled experience against the backdrop of Vermont&#8217;s stunning landscape.</span></p>
+<h3><b>Fall: The Beauty of Foliage Season</b></h3>
+<p><span style="font-weight: 300;">In autumn, Killington transforms yet again, this time into a tapestry of vibrant colors. The fall foliage season attracts visitors from near and far, eager to witness the spectacular display of reds, oranges, and yellows that blanket the mountainsides. Scenic gondola rides to Killington Peak become a popular attraction, offering panoramic views of the surrounding landscape awash in autumn hues. It&#8217;s a time for peaceful reflection and appreciation of nature&#8217;s beauty, with the crisp fall air adding a refreshing touch to every outdoor activity.</span></p>
+<h3><b>Beyond the Outdoors: Year-Round Entertainment and Relaxation</b></h3>
+<p><span style="font-weight: 300;">Killington Resort&#8217;s appeal extends beyond its outdoor activities. The resort village is home to a variety of dining options, from cozy cafes to fine dining restaurants, where visitors can savor the flavors of Vermont, including local cheeses, craft beers, and farm-to-table dishes. Accommodations range from comfortable lodges to luxurious condos, providing a welcoming retreat after a day of adventure.</span></p>
+<p><span style="font-weight: 300;">Throughout the year, Killington hosts a series of events that add to its vibrant atmosphere. From music festivals and beer tasties in the summer to the exhilarating Audi FIS Ski World Cup in the winter, there&#8217;s always something happening that brings the community and visitors together, creating a sense of unity and celebration that enhances the Killington experience.</span></p>
+<h2><b>Mystical Caves and Falls of Quechee Gorge  </b></h2>
+<h3><b>The Journey to Quechee Gorge</b></h3>
+<p><span style="font-weight: 300;">The drive from Burlington to Quechee is a visual treat, winding through the picturesque landscapes of Vermont. As the urban backdrop fades, one is greeted by the rolling hills, verdant fields, and quaint towns that define the state&#8217;s countryside. This transition sets the stage for the natural splendor that is Quechee Gorge. Located within the Quechee State Park, the gorge is accessible and welcoming to visitors yearning for a glimpse into Vermont&#8217;s dramatic geography.</span></p>
+<h3><b>Hiking the Gorge</b></h3>
+<p><span style="font-weight: 300;">The heart of the Quechee Gorge experience lies in its trails. The main gorge trail gently descends from the visitors&#8217; center to the base of the gorge, offering a relatively easy hike that is accessible to most. Along the path, several lookout points offer breathtaking views of the gorge and the river that carved its way through the rock. The play of light and shadow, water and stone, creates a canvas that changes with the seasons, offering a fresh beauty with each visit.</span></p>
+<p><span style="font-weight: 300;">For the more adventurous, surrounding trails wind through the diverse ecosystems of the park, leading to hidden waterfalls, serene woodland areas, and panoramic vistas of the Vermont landscape. The sound of the rushing river accompanies hikers, a constant reminder of the natural forces at work in this serene environment.</span></p>
+<figure id="attachment_253" aria-describedby="caption-attachment-253" style="width: 1160px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-253" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201160%20727'%3E%3C/svg%3E" alt="Quechee Gorge  " width="1160" height="727" data-lazy-srcset="/wp-content/uploads/2024/03/image-100-2613556.webp 1160w, /wp-content/uploads/2024/03/image-100-2613556-300x188.webp 300w, /wp-content/uploads/2024/03/image-100-2613556-1024x642.webp 1024w, /wp-content/uploads/2024/03/image-100-2613556-768x481.webp 768w, /wp-content/uploads/2024/03/image-100-2613556-96x60.webp 96w" data-lazy-sizes="(max-width: 1160px) 100vw, 1160px" data-lazy-src="/wp-content/uploads/2024/03/image-100-2613556.webp" /><noscript><img decoding="async" class="size-full wp-image-253" src="/wp-content/uploads/2024/03/image-100-2613556.webp" alt="Quechee Gorge  " width="1160" height="727" srcset="/wp-content/uploads/2024/03/image-100-2613556.webp 1160w, /wp-content/uploads/2024/03/image-100-2613556-300x188.webp 300w, /wp-content/uploads/2024/03/image-100-2613556-1024x642.webp 1024w, /wp-content/uploads/2024/03/image-100-2613556-768x481.webp 768w, /wp-content/uploads/2024/03/image-100-2613556-96x60.webp 96w" sizes="(max-width: 1160px) 100vw, 1160px" /></noscript><figcaption id="caption-attachment-253" class="wp-caption-text">Quechee Gorge  &#8211; Source: Quechee Times</figcaption></figure>
+<h3><b>The Falls and Beyond</b></h3>
+<p><span style="font-weight: 300;">Beyond the gorge itself, the Quechee area is home to a number of attractions that enrich the day trip experience. The Quechee Falls, located just a short walk from the gorge, present a powerful display of water cascading over rocks, creating a mesmerizing spectacle especially potent during the spring melt or after heavy rains.</span></p>
+<p><span style="font-weight: 300;">Further exploration reveals the Quechee Covered Bridge, a picturesque structure that offers a glimpse into Vermont&#8217;s rural heritage. This historic bridge, coupled with the backdrop of the falls, is a photographer&#8217;s dream and a symbol of the area&#8217;s charm.</span></p>
+<h3><b>Natural Wonders and Local Culture</b></h3>
+<p><span style="font-weight: 300;">Quechee Gorge and its surroundings are not only about the landscapes but also about the interaction between nature and the local culture. The nearby Quechee Gorge Village is a testament to this blend, offering visitors a chance to explore artisan shops, local eateries, and the famed Quechee Gorge Village Antique Mall. Here, the richness of Vermont&#8217;s crafts, foods, and antiques is on full display, providing a perfect complement to the day&#8217;s natural explorations.</span></p>
+<p><span style="font-weight: 300;">Seasonal events, such as the Quechee Hot Air Balloon Festival, add another layer of allure to the area, showcasing the vibrant community spirit and the stunning setting in which it thrives. The sight of colorful balloons rising above the gorge is a spectacle that embodies the magic of Quechee—a blend of natural beauty and human creativity.</span></p>
+<h3><b>The Artistic Heartbeat of Rutland</b></h3>
+<p><span style="font-weight: 300;">Rutland&#8217;s commitment to the arts is palpable at every corner of its streets, manifested through vibrant murals, galleries, and live performances that dot the cityscape. This small city has cultivated an environment where artists and creatives find a supportive community, one that celebrates expression in its myriad forms. The Chaffee Art Center, housed in a 19th-century mansion, stands as a testament to Rutland&#8217;s artistic endeavors. With its galleries, educational workshops, and community events, the center not only showcases the work of local and regional artists but also fosters a deeper appreciation for the arts within the community.</span></p>
+<p><span style="font-weight: 300;">Public art initiatives, such as the Rutland Sculpture Trail, invite locals and visitors alike to embark on a visual journey through the city&#8217;s history and heritage. Each sculpture tells a story, from the homage to the region&#8217;s marble industry to the tributes paid to notable historical figures, weaving a narrative that spans centuries.</span></p>
+<h3><b>Delving into History</b></h3>
+<p><span style="font-weight: 300;">Rutland&#8217;s rich tapestry is deeply colored by its historical threads. The city&#8217;s architecture is a visible chronicle of its past, with structures dating back to the 1800s offering a glimpse into the life of a bygone era. The Paramount Theatre, an exquisite example of early 20th-century design, not only serves as a venue for cultural events but also as a beacon of Rutland&#8217;s historical preservation efforts. Restored to its former glory, the theatre now hosts performances that range from musical acts to theatrical productions, acting as a cultural hub for the community.</span></p>
+<p><span style="font-weight: 300;">The Rutland Historical Society Museum further enriches the cultural exploration of Rutland, offering insights into the city’s evolution. Through its collections and exhibits, visitors are invited to traverse time, from Rutland&#8217;s early days as a farming community to its transformation into a thriving city known for its marble quarries. The museum, much like the city itself, is a place where stories of resilience, innovation, and community spirit are preserved and celebrated.</span></p>
+<h2><b>Conclusion</b></h2>
+<p><span style="font-weight: 300;">In reflecting upon the rich tapestry of experiences that Vermont offers, from the serene beauty of its landscapes to the vibrant cultural scenes that dot its towns and cities, it&#8217;s clear that this New England state is more than just a destination; it&#8217;s a journey through a living, breathing storybook. Vermont, with its verdant forests, rolling hills, and pristine lakes, invites visitors and locals alike to immerse themselves in a world where nature&#8217;s tranquility meets the bustling creativity of human expression. This conclusion seeks to encapsulate the essence of Vermont, highlighting the interconnectedness of its natural beauty, cultural richness, and community spirit.</span></p>
+<p><span style="font-weight: 300;">Vermont&#8217;s natural beauty is undeniably its most compelling draw. The Green Mountains stretch across the state, offering a playground for adventurers and a serene backdrop for those seeking peace. The changing seasons paint the landscape in vivid colors, from the lush greens of summer to the fiery hues of fall and from the pristine whites of winter to the fresh blooms of spring. Each season in Vermont is a new chapter in an ongoing saga, inviting exploration and admiration.</span></p>
+<figure id="attachment_254" aria-describedby="caption-attachment-254" style="width: 640px" class="wp-caption aligncenter"><img decoding="async" class="wp-image-254 size-full" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20480'%3E%3C/svg%3E" alt="Day trips from Burlington, Vermont" width="640" height="480" data-lazy-srcset="/wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650.webp 640w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-300x225.webp 300w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-80x60.webp 80w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-110x83.webp 110w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="/wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650.webp" /><noscript><img decoding="async" class="wp-image-254 size-full" src="/wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650.webp" alt="Day trips from Burlington, Vermont" width="640" height="480" srcset="/wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650.webp 640w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-300x225.webp 300w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-80x60.webp 80w, /wp-content/uploads/2024/03/image-2024-03-12T055132.043-3543650-110x83.webp 110w" sizes="(max-width: 640px) 100vw, 640px" /></noscript><figcaption id="caption-attachment-254" class="wp-caption-text">Vermont &#8211; Source: Vermont</figcaption></figure>
+<p><span style="font-weight: 300;">Beyond its natural allure, Vermont boasts a vibrant cultural scene that celebrates art, history, and culinary excellence. The state&#8217;s commitment to preserving its heritage while fostering innovation is evident in its towns and cities, where historic buildings house contemporary galleries, theaters, and eateries. Festivals and farmers markets serve as gathering points for the community, showcasing the state&#8217;s agricultural bounty and artisanal talents. Vermont&#8217;s culture is a reflection of its people: resilient, creative, and deeply connected to the land.</span></p>
+<p><span style="font-weight: 300;">At the heart of Vermont&#8217;s identity is its strong sense of community and dedication to sustainable living. The state&#8217;s ethos is built on a foundation of environmental stewardship, local agriculture, and support for small businesses, creating a model of sustainability that resonates beyond its borders. Vermonters take pride in their state&#8217;s natural beauty and work collectively to preserve it, demonstrating a deep understanding of the interconnectedness of people and the planet.</span></p>
+<p><span style="font-weight: 300;">Vermont is more than a sum of its parts; it is a state of mind. It represents a way of living that values simplicity, authenticity, and harmony with nature. The experiences one can have in Vermont—whether it&#8217;s a peaceful hike through the woods, a visit to a bustling farmers market, or an evening enjoying local music are imbued with a sense of purpose and place. Vermont doesn&#8217;t just offer a retreat from the noise of daily life; it provides a lens through which to view a different way of being, one that is rooted in community, respect for the environment, and the joy of discovery.</span></p>
+<p><span style="font-weight: 300;">In conclusion, Vermont stands as a testament to the beauty of the natural world and the resilience of the human spirit. Its landscapes inspire, its culture enriches, and its commitment to sustainability and community uplifts. For those who visit or call it home, Vermont is not just a place on the map; it&#8217;s a journey into the heart of what it means to live fully, with awareness and appreciation for the world around us. As we contemplate the myriad of experiences that Vermont offers, from Day trips from Burlington, Vermont, to quiet moments in its vast wilderness, we are reminded of the enduring beauty and strength that lie in simplicity and connection to each other and to the earth.</span></p>
+<p>&nbsp;</p>
+	</div><!-- .entry-content -->
+        	<footer class="entry-footer">
+    		    	</footer><!-- .entry-footer -->
+    </article><!-- #post-212 -->
+        </main><!-- #main -->        
+
+                    
+            <nav class="post-navigation pagination" role="navigation">
+                <h2 class="screen-reader-text">Post Navigation</h2>
+                <div class="nav-links">
+                                        <div class="nav-previous">
+                        <a href="/day-trips-from-wilmington-nc/" rel="prev">
+                            <span class="meta-nav"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><defs><style>.arla{fill:#999596;}</style></defs><path class="arla" d="M16.01,11H8v2h8.01v3L22,12,16.01,8Z" transform="translate(22 16) rotate(180)"/></svg>Previous Post</span>
+                            <span class="post-title">Best Day Trips From Wilmington, NC</span>
+                        </a>
+                        <figure class="post-img">
+                            <img width="370" height="247" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20370%20247'%3E%3C/svg%3E" alt="Day Trips From Burlington, Vermont" data-lazy-src="/wp-content/uploads/2024/03/DALL·E-2024-03-11-06.05.04-A-panoramic-view-of-Wilmington-North-Carolina-capturing-the-essence-of-this-charming-Southern-city.-The-scene-includes-the-historic-downtown-riverfr-1-2933095-370x247.webp"><noscript><img width="370" height="247" src="/wp-content/uploads/2024/03/DALL·E-2024-03-11-06.05.04-A-panoramic-view-of-Wilmington-North-Carolina-capturing-the-essence-of-this-charming-Southern-city.-The-scene-includes-the-historic-downtown-riverfr-1-2933095-370x247.webp" alt="Day Trips From Burlington, Vermont"></noscript>                        </figure>
+                    </div>
+                                                            <div class="nav-next">
+                        <a href="/day-trips-from-roanoke-va/" rel="next">
+                            <span class="meta-nav">Next Post<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><defs><style>.arra{fill:#999596;}</style></defs><path class="arra" d="M16.01,11H8v2h8.01v3L22,12,16.01,8Z" transform="translate(-8 -8)"/></svg></span>
+                            <span class="post-title">Top Day Trips From Roanoke, VA</span>
+                        </a>
+                        <figure class="post-img">
+                            <img width="370" height="247" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20370%20247'%3E%3C/svg%3E" alt="Day Trips From Burlington, Vermont" data-lazy-src="/wp-content/uploads/2024/03/DALL·E-2024-03-13-22.42.56-Create-a-wide-image-that-captures-the-unique-charm-and-natural-beauty-of-Roanoke-Virginia.-The-image-should-highlight-the-citys-distinctive-features-1-9222732-370x247.webp"><noscript><img width="370" height="247" src="/wp-content/uploads/2024/03/DALL·E-2024-03-13-22.42.56-Create-a-wide-image-that-captures-the-unique-charm-and-natural-beauty-of-Roanoke-Virginia.-The-image-should-highlight-the-citys-distinctive-features-1-9222732-370x247.webp" alt="Day Trips From Burlington, Vermont"></noscript>                        </figure>
+                    </div>
+                                    </div>
+            </nav>        
+                
+        <div class="additional-post related-posts">
+    		<h3 class="post-title"><span>Recommended Articles</span></h3>            <div class="article-wrap">
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/incredible-day-trips-from-sydney/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day Trip from Sydney" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day Trip from Sydney" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-01-01.24.47-A-close-up-view-of-Sydney-during-daytime-focusing-on-iconic-architecture-and-bustling-city-life.-The-image-should-showcase-the-vibrant-atmosphere-of-1-7243632-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/incredible-day-trips-from-sydney/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-01T22:04:01+03:00" itemprop="dateModified">01.04.2024</time></time><time class="updated" datetime="2024-04-05T18:25:40+03:00" itemprop="datePublished">05.04.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/incredible-day-trips-from-sydney/" rel="bookmark">Incredible Day Trips from Sydney</a></h3>                        
+        				</header>
+        			</article>
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/best-things-to-do-in-hobbs-nm/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day trips from Hobbs" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Day trips from Hobbs" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-18-01.53.48-A-realistic-daytime-image-of-a-vibrant-modern-city-as-seen-through-a-high-end-wide-angle-lens.-The-cityscape-should-feature-tall-skyscrapers-busy-st-1-5393136-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/best-things-to-do-in-hobbs-nm/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-18T03:56:51+03:00" itemprop="dateModified">18.04.2024</time></time><time class="updated" datetime="2024-04-12T03:54:39+03:00" itemprop="datePublished">12.04.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/best-things-to-do-in-hobbs-nm/" rel="bookmark">Best Things To do in Hobbs, NM</a></h3>                        
+        				</header>
+        			</article>
+    			                    <article class="post">
+        				<figure class="post-thumbnail">
+                            <a href="/best-day-trips-from-grand-rapids/">
+                                <img width="110" height="83" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%2083'%3E%3C/svg%3E" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Best Day Trips from Grand Rapids" itemprop="image" decoding="async" data-lazy-srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-640x480.webp 640w" data-lazy-sizes="(max-width: 110px) 100vw, 110px" data-lazy-src="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-110x83.webp" /><noscript><img width="110" height="83" src="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-110x83.webp" class="attachment-blossom-spa-related size-blossom-spa-related wp-post-image" alt="Best Day Trips from Grand Rapids" itemprop="image" decoding="async" srcset="/wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-110x83.webp 110w, /wp-content/uploads/2024/04/DALL·E-2024-04-02-20.31.55-A-daytime-close-up-view-of-Grand-Rapids-Michigan-showcasing-the-citys-architecture-and-urban-landscape-under-a-clear-bright-sky.-The-image-captur-1-7129273-640x480.webp 640w" sizes="(max-width: 110px) 100vw, 110px" /></noscript>                            </a>
+                        </figure>
+        				<header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.clk{fill:none;}.clkb{fill:#ccc6c8;}</style></defs><g transform="translate(7 18)"><g transform="translate(-7 -18)"><path class="clk" d="M0,0H36V36H0Z"/></g><g transform="translate(-2 -13)"><path class="clkb" d="M15.5,2A13.5,13.5,0,1,0,29,15.5,13.54,13.54,0,0,0,15.5,2Zm0,24.3A10.8,10.8,0,1,1,26.3,15.5,10.814,10.814,0,0,1,15.5,26.3Z" transform="translate(-2 -2)"/><path class="clkb" d="M13.025,7H11v8.1l7.02,4.32,1.08-1.755L13.025,14.02Z" transform="translate(1.15 -0.25)"/></g></g>
+        </svg><a href="/best-day-trips-from-grand-rapids/" rel="bookmark"><time class="entry-date published updated" datetime="2024-04-04T11:44:44+03:00" itemprop="dateModified">04.04.2024</time></time><time class="updated" datetime="2024-04-11T22:30:27+03:00" itemprop="datePublished">11.04.2024</time></a></span>                            </div>
+        					<h3 class="entry-title"><a href="/best-day-trips-from-grand-rapids/" rel="bookmark">Best Day Trips from Grand Rapids</a></h3>                        
+        				</header>
+        			</article>
+    			            </div>    		
+    	</div>
+        
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"><span>Leave A Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/day-trips-from-burlington-vermont/" style="display:none;">Cancel reply</a></small></span></h3><form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label class="screen-reader-text">Comment</label><textarea id="comment" name="comment" placeholder="Comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><label class="screen-reader-text">Full Name</label><input id="author" name="author" placeholder="Name*" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label class="screen-reader-text">Email</label><input id="email" name="email" placeholder="Email*" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label class="screen-reader-text">Website</label><input id="url" name="url" placeholder="Website" type="text" value="" size="30" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='212' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!--  -->
+	
+</div><!-- #comments -->
+    </div><!-- #primary -->
+
+<aside id="secondary" class="widget-area" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+	<section id="calendar-2" class="widget widget_calendar"><h2 class="widget-title" itemprop="name">Check Out More Events By Date!</h2><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>September 2026</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td id="today">4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="/2024/04/">&laquo; Apr</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></section><section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="/"><label><span class="screen-reader-text">Search for:</span><input type="search" class="search-field" placeholder="Search..." value="" name="s" /></label><input type="submit" id="submit-field" class="search-submit" value="Search" /></form></section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title" itemprop="name">Recent Posts</h2>
+		<ul>
+											<li>
+					<a href="/incredible-day-trips-from-adelaide/">Incredible Day Trips from Adelaide</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-palo-alto/">Best Day Trips from Palo Alto</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-oahu-to-other-islands/">Best Day Trips from Oahu To Other Islands</a>
+									</li>
+											<li>
+					<a href="/best-day-trips-from-rotterdam/">Best Day trips from Rotterdam</a>
+									</li>
+											<li>
+					<a href="/best-things-to-do-in-bradley-beach-nj/">Best Things To Do in Bradley beach, NJ</a>
+									</li>
+					</ul>
+
+		</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title" itemprop="name">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-2"><a href="/art.html">Art</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/contest.html">Contest</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="/date-night.html">Date Night</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="/exercise.html">Exercise</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8.html">Family Fun</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="/category/travel/">Travel</a>
+</li>
+			</ul>
+
+			</section></aside><!-- #secondary -->
+            
+        </div><!-- .container -->        
+    </div><!-- .error-holder/site-content -->
+        <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="footer-b">
+		<div class="container">
+			<div class="copyright">           
+            <div class="copyright-wrap">© 2012 365-thingstodo.com. All Rights Reserved. All the best things to do in Kitchener-Waterloo!</div> Blossom Spa | Developed By <a href="https://blossomthemes.com/" rel="nofollow" target="_blank"> Blossom Themes</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>. <a class="privacy-policy-link" href="/privacy-policy/" rel="privacy-policy">Privacy Policy</a>               
+            </div>
+                        <button aria-label="go to top" class="back-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+		</div>
+	</div>
+        </footer><!-- #colophon -->
+        </div><!-- #page -->
+    <div class='code-block code-block-1' style='margin: 8px 0; clear: both;'>
+<script type="rocketlazyloadscript" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7899819773027559"
+     crossorigin="anonymous"></script></div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/login0yc0wq1xt9sf4uxpuw7b\/|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/365-kw.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/all.min.js" id="all-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/v4-shims.min.js" id="v4-shims-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/owl.carousel.min.js" id="owl-carousel-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/owlcarousel2-a11ylayer.min.js" id="owlcarousel2-a11ylayer-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/perfect-scrollbar.min.js" id="perfect-scrollbar-js" defer></script>
+<script type="text/javascript" id="blossom-spa-js-extra">
+/* <![CDATA[ */
+var blossom_spa_data = {"rtl":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/custom.min.js" id="blossom-spa-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-content/themes/blossom-spa/js/modal-accessibility.min.js" id="blossom-spa-modal-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+<script type="rocketlazyloadscript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="/wp-content/cache/min/1/194315219f09639729bcb2e74a825881.css" media="all" data-minify="1" /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1788488891 -->
