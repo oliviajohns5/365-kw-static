@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://365-kw.com/sitemap.xml
+LLMs: https://365-kw.com/llms.txt

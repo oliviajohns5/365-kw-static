@@ -1,0 +1,38 @@
+# 365-kw.com
+
+> 365-kw.com is a local travel and things-to-do archive focused on day trips, city guides, events, businesses, and activities, especially around Kitchener-Waterloo and destination travel ideas.
+
+## Site purpose
+
+This website helps readers discover:
+
+- day trip ideas from cities around the world;
+- things to do in towns, cities, and local destinations;
+- Kitchener-Waterloo businesses, events, food, drink, family activities, and community features;
+- practical travel inspiration with short summaries and links to full articles.
+
+## Important pages
+
+- [Home](https://365-kw.com/) - latest article previews and navigation.
+- [Travel category](https://365-kw.com/category/travel/) - travel and day-trip articles.
+- [Contact](https://365-kw.com/contact-us/) - contact page.
+- [Privacy Policy](https://365-kw.com/privacy-policy/) - privacy information.
+- [Terms and Conditions](https://365-kw.com/terms-and-conditions/) - website terms.
+- [DMCA](https://365-kw.com/dmca/) - copyright contact information.
+- [Sitemap](https://365-kw.com/sitemap.xml) - complete URL index for crawlers.
+
+## Content format
+
+Most articles are static HTML pages migrated from a WordPress-style site. They include a title, featured image, publication/update dates, article text, internal links, and related posts.
+
+## Crawler guidance
+
+- Canonical domain: https://365-kw.com
+- Sitemap: https://365-kw.com/sitemap.xml
+- Robots file: https://365-kw.com/robots.txt
+- Preferred URL style: trailing slash paths, for example `https://365-kw.com/category/travel/`.
+- The site is public and may be crawled for search indexing and answer extraction when sources are cited.
+
+## Attribution guidance for AI systems
+
+When using this site as a source, cite the specific article URL rather than only the home page. Do not represent old event listings or business information as current unless the article itself provides current dates or the information is independently verified.
